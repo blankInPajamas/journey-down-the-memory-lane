@@ -1,0 +1,142 @@
+[gd_scene load_steps=10 format=3 uid="uid://b8cm6xhe0iw1b"]
+
+[ext_resource type="Texture2D" uid="uid://dgac8ghpxbbys" path="res://assets/background-002.jpg" id="1_l3owv"]
+[ext_resource type="FontFile" uid="uid://co6ysfhwlj837" path="res://fonts/KodeMono-Bold.ttf" id="2_qhv5o"]
+[ext_resource type="FontFile" uid="uid://b1i0g1mpjhfh1" path="res://fonts/KodeMono-Medium.ttf" id="3_qhv5o"]
+
+[sub_resource type="Theme" id="Theme_lfnbm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0lo38"]
+bg_color = Color(0.0901961, 0.0901961, 0.0901961, 0.741176)
+corner_radius_top_left = 80
+corner_radius_top_right = 80
+corner_radius_bottom_right = 80
+
+[sub_resource type="LabelSettings" id="LabelSettings_u8ovc"]
+font = ExtResource("2_qhv5o")
+font_size = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lfnbm"]
+content_margin_left = 30.0
+content_margin_top = 10.0
+content_margin_right = 30.0
+content_margin_bottom = 10.0
+bg_color = Color(0.26779, 0.26779, 0.26779, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u8ovc"]
+content_margin_left = 30.0
+content_margin_top = 10.0
+content_margin_right = 30.0
+content_margin_bottom = 20.0
+bg_color = Color(0.26779, 0.26779, 0.26779, 1)
+border_width_bottom = 10
+border_color = Color(0.171637, 0.171637, 0.171637, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="Theme" id="Theme_y1k3o"]
+default_font = ExtResource("3_qhv5o")
+default_font_size = 20
+Button/font_sizes/font_size = 20
+Button/styles/hover = SubResource("StyleBoxFlat_lfnbm")
+Button/styles/normal = SubResource("StyleBoxFlat_u8ovc")
+Button/styles/pressed = null
+
+[node name="Objective" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1295.0
+offset_bottom = 726.0
+texture = ExtResource("1_l3owv")
+
+[node name="ColorRect" type="Panel" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -558.5
+offset_top = -217.5
+offset_right = 558.5
+offset_bottom = 217.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_lfnbm")
+theme_override_styles/panel = SubResource("StyleBoxFlat_0lo38")
+
+[node name="Label" type="Label" parent="TextureRect/ColorRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -180.0
+offset_top = 36.0
+offset_right = 180.0
+offset_bottom = 113.0
+grow_horizontal = 2
+text = "OBJECTIVES"
+label_settings = SubResource("LabelSettings_u8ovc")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -442.5
+offset_top = -106.0
+offset_right = 447.5
+offset_bottom = 149.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="objective-list-1" type="Label" parent="TextureRect/ColorRect/VBoxContainer"]
+custom_minimum_size = Vector2(550, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_qhv5o")
+theme_override_font_sizes/font_size = 25
+text = "+ Conversation with Ruksana (90XP)"
+autowrap_mode = 2
+
+[node name="objective-list-2" type="Label" parent="TextureRect/ColorRect/VBoxContainer"]
+custom_minimum_size = Vector2(550, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_qhv5o")
+theme_override_font_sizes/font_size = 25
+text = "+ Trade with Ruksana (Bonus: 10% Gain in XP"
+autowrap_mode = 2
+
+[node name="objective-list-3" type="Label" parent="TextureRect/ColorRect/VBoxContainer"]
+custom_minimum_size = Vector2(550, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_qhv5o")
+theme_override_font_sizes/font_size = 25
+text = "+ Go to Ruksana's office without spending any money (200XP)"
+autowrap_mode = 2
+
+[node name="objective-list-4" type="Label" parent="TextureRect/ColorRect/VBoxContainer"]
+custom_minimum_size = Vector2(550, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_qhv5o")
+theme_override_font_sizes/font_size = 25
+text = "+ Convince Akib to come with you (25XP)"
+autowrap_mode = 2
+
+[node name="Back btn" type="Button" parent="TextureRect"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 26.0
+offset_right = 145.0
+offset_bottom = 72.0
+theme = SubResource("Theme_y1k3o")
+text = "BACK"
