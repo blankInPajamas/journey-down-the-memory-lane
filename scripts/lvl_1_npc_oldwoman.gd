@@ -4,6 +4,7 @@ extends StaticBody2D
 @export var npc_name: String = "Old Woman"
 @export var portrait_texture: Texture2D
 @export var initial_greeting: String = "Hello, traveller. The years have not been kind..."
+@export_multiline var persona: String = "You are a mysterious old woman..."
 
 	
 @onready var interaction_prompt = $InteractionPrompt

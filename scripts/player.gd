@@ -3,9 +3,71 @@ extends CharacterBody2D
 
 # Exporting the variable allows you to change the speed in the Inspector.
 @export var speed: float = 100.0
+var conversation_history = [] # Stores the entire conversation
+var npc_persona = "" # Stores the NPC's core personality prompt
+var is_chatting = false
+@onready var ollama_request = ChatWindow.get_node("OllamaRequest")
 
+# --- This function starts a NEW conversation ---
+func start_new_conversation(npc_node):
+	is_chatting = true
+	npc_in_range = npc_node # Keep track of who we are talking to
+	npc_in_range.hide_prompt()
+	
+	# Clear any old conversation
+	conversation_history.clear()
+	
+	# Get the NPC's persona and initial greeting
+	# IMPORTANT: You'll need to add a `persona` export variable to your npc.gd
+	npc_persona = npc_in_range.persona 
+	var initial_greeting = npc_in_range.initial_greeting
+	
+	# Add the NPC's first line to the history
+	conversation_history.append({"sender": "npc", "text": initial_greeting})
+	
+	# Display the first message
+	var npc_data = {
+		"name": npc_in_range.npc_name,
+		"portrait": npc_in_range.portrait_texture
+	}
+	ChatWindow.start_conversation(npc_data, initial_greeting)
+	
+	
 
+func _on_player_spoke(text: String):
+	# Add the player's message to the history
+	conversation_history.append({"sender": "player", "text": text})
+	
+	ChatWindow.show_thinking_indicator()
+	print("Sending request to backend with history: ", conversation_history)
+	
+	# Create the data payload with the history and persona
+	var body = JSON.stringify({
+		"history": conversation_history,
+		"persona": npc_persona
+	})
+	
+	var headers = ["Content-Type: application/json"]
+	ollama_request.request("http://127.0.0.1:5000/interact", headers, HTTPClient.METHOD_POST, body)
 
+# --- This function receives the LLM's response ---
+func _on_ollama_request_completed(result, response_code, headers, body):
+	print("SUCCESS! The request_completed signal was received! Code: ", response_code)
+	
+	# Let's also see what the backend sent back
+	print("Raw response body: ", body.get_string_from_utf8())
+	
+	if response_code == 200:
+		var json = JSON.parse_string(body.get_string_from_utf8())
+		if json:
+			var npc_message = json.get("npc_message", "...")
+			# Add the NPC's new response to the history
+			conversation_history.append({"sender": "npc", "text": npc_message})
+			ChatWindow.display_npc_message(npc_message)
+	else:
+		# Handle error
+		ChatWindow.display_npc_message("I... I can't think of what to say.")
+		
 # A reference to the AnimatedSprite2D node.
 # The '@onready' keyword ensures the node is available when the variable is first used.
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
@@ -37,22 +99,14 @@ func _physics_process(delta: float) -> void:
 func _ready():
 	# Connect to the ChatWindow's custom signal
 	ChatWindow.player_spoke.connect(_on_player_spoke)
+	ollama_request.request_completed.connect(_on_ollama_request_completed)
 
-func _on_player_spoke(text: String):
-	print("Player said: ", text)
-	# THIS IS WHERE YOU WILL ADD YOUR HTTPRequest LOGIC
-	# http_request_node.request("your_backend_url", headers, HTTPClient.METHOD_POST, text)
 
 func _unhandled_input(event):
 	if Input.is_action_just_pressed("ui_accept"):
 		if not ChatWindow.is_visible() and npc_in_range != null:
-			# Start the conversation
-			var npc_data = {
-				"name": npc_in_range.npc_name,
-				"portrait": npc_in_range.portrait_texture,
-				"greeting": npc_in_range.initial_greeting
-			}
-			ChatWindow.start_conversation(npc_data)
+			start_new_conversation(npc_in_range)
+	# The logic for closing the window should now be handled inside ChatWindow.gd
 			
 func update_animation(direction: Vector2) -> void:
 	# If the player is not moving, play the idle animation.

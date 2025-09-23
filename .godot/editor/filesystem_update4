@@ -1,9 +1,3 @@
-res://scenes/player.tscn
-res://chat_window.gd
-res://scenes/lvl_1_npc_oldwoman.gd
-res://scenes/lvl1_npc_oldwoman.tscn
 res://scripts/player.gd
-res://scenes/chat_window.tscn
-res://scenes/level_1.tscn
 res://scripts/chat_window.gd
-res://scripts/lvl_1_npc_oldwoman.gd
+res://scenes/chat_window.tscn

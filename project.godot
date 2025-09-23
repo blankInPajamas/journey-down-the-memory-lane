@@ -21,6 +21,7 @@ ChatWindow="*res://scenes/chat_window.tscn"
 
 [display]
 
+window/stretch/mode="canvas_items"
 window/stretch/scale=3.0
 
 [rendering]

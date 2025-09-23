@@ -1,3 +1,4 @@
+HTTPRequest
 Camera2D
 CanvasLayer
 Timer
@@ -12,4 +13,3 @@ Control
 CollisionShape2D
 Area2D
 StaticBody2D
-CharacterBody2D

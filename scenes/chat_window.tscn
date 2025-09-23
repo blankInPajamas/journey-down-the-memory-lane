@@ -11,18 +11,18 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_4280a")
+"texture": ExtResource("6_2c65u")
 }],
 "loop": true,
-"name": &"npc_talking",
+"name": &"point_down",
 "speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("6_2c65u")
+"texture": ExtResource("5_4280a")
 }],
 "loop": true,
-"name": &"player_talking",
+"name": &"point_up",
 "speed": 5.0
 }]
 
@@ -30,53 +30,66 @@ animations = [{
 script = ExtResource("1_nwrjk")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
-offset_left = -80.0
-offset_top = 16.0
-offset_right = 432.0
-offset_bottom = 127.0
+offset_left = 22.0
+offset_top = 107.0
+offset_right = 534.0
+offset_bottom = 218.0
+scale = Vector2(0.5, 0.494)
 texture = ExtResource("2_a1bs7")
 region_rect = Rect2(0, 0, 300, 58)
 
 [node name="TypewriterTimer" type="Timer" parent="."]
 wait_time = 0.05
+one_shot = true
 
 [node name="NinePatchRect2" type="NinePatchRect" parent="."]
-offset_left = -77.0
-offset_top = 128.0
-offset_right = 431.0
-offset_bottom = 202.0
+offset_left = 24.0
+offset_top = 163.0
+offset_right = 532.0
+offset_bottom = 237.0
+scale = Vector2(0.5, 0.494)
 texture = ExtResource("3_pkcf1")
 
 [node name="NameLabel" type="RichTextLabel" parent="."]
-offset_left = -64.0
-offset_top = 14.0
-offset_right = 27.0
-offset_bottom = 37.0
+offset_left = 28.0
+offset_top = 105.0
+offset_right = 134.0
+offset_bottom = 128.0
+scale = Vector2(0.5, 0.494)
 text = "Name"
 
 [node name="DialogueText" type="RichTextLabel" parent="."]
-offset_left = 16.0
-offset_top = 50.0
-offset_right = 408.0
-offset_bottom = 106.0
+offset_left = 68.0
+offset_top = 122.0
+offset_right = 460.0
+offset_bottom = 178.0
+scale = Vector2(0.5, 0.494)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 text = "SPEECH"
 
 [node name="Portrait" type="TextureRect" parent="."]
-offset_left = -64.0
-offset_top = 50.0
-offset_right = -11.0
-offset_bottom = 111.0
+offset_left = 30.0
+offset_top = 124.0
+offset_right = 83.0
+offset_bottom = 185.0
+scale = Vector2(0.5, 0.494)
 texture = ExtResource("4_dh2cy")
 
 [node name="PlayerInput" type="LineEdit" parent="."]
-offset_left = -62.0
-offset_top = 139.0
-offset_right = 414.0
-offset_bottom = 189.0
+offset_left = 31.0
+offset_top = 168.0
+offset_right = 507.0
+offset_bottom = 218.0
+scale = Vector2(0.5, 0.494)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 placeholder_text = "Input text"
 
 [node name="ContinueIndicator" type="AnimatedSprite2D" parent="."]
-position = Vector2(18, 125)
-scale = Vector2(1.8669004, 1.8457327)
+position = Vector2(72.375, 160.10547)
+scale = Vector2(0.71153843, 0.63161546)
 sprite_frames = SubResource("SpriteFrames_ee5nq")
-animation = &"player_talking"
+animation = &"point_down"
+
+[node name="OllamaRequest" type="HTTPRequest" parent="."]
+
+[connection signal="text_submitted" from="PlayerInput" to="." method="_on_player_text_submitted"]
