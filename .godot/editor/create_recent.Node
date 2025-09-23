@@ -1,3 +1,15 @@
 Camera2D
-TileMapLayer
-AnimationPlayer
+CanvasLayer
+Timer
+Sprite2D
+AnimatedSprite2D
+LineEdit
+TextureRect
+Window
+RichTextLabel
+NinePatchRect
+Control
+CollisionShape2D
+Area2D
+StaticBody2D
+CharacterBody2D

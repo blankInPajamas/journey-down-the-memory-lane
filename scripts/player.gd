@@ -4,6 +4,8 @@ extends CharacterBody2D
 # Exporting the variable allows you to change the speed in the Inspector.
 @export var speed: float = 100.0
 
+
+
 # A reference to the AnimatedSprite2D node.
 # The '@onready' keyword ensures the node is available when the variable is first used.
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
@@ -32,7 +34,26 @@ func _physics_process(delta: float) -> void:
 	# --- 4. Update Animations ---
 	update_animation(input_direction)
 
+func _ready():
+	# Connect to the ChatWindow's custom signal
+	ChatWindow.player_spoke.connect(_on_player_spoke)
 
+func _on_player_spoke(text: String):
+	print("Player said: ", text)
+	# THIS IS WHERE YOU WILL ADD YOUR HTTPRequest LOGIC
+	# http_request_node.request("your_backend_url", headers, HTTPClient.METHOD_POST, text)
+
+func _unhandled_input(event):
+	if Input.is_action_just_pressed("ui_accept"):
+		if not ChatWindow.is_visible() and npc_in_range != null:
+			# Start the conversation
+			var npc_data = {
+				"name": npc_in_range.npc_name,
+				"portrait": npc_in_range.portrait_texture,
+				"greeting": npc_in_range.initial_greeting
+			}
+			ChatWindow.start_conversation(npc_data)
+			
 func update_animation(direction: Vector2) -> void:
 	# If the player is not moving, play the idle animation.
 	if direction == Vector2.ZERO:
@@ -45,7 +66,27 @@ func update_animation(direction: Vector2) -> void:
 	# Flip the sprite horizontally based on direction.
 	update_sprite_flip(direction)
 
+var npc_in_range = null # The variable we used before
 
+# This function will be called by the NPC's script
+func player_can_interact(npc_node):
+	npc_in_range = npc_node
+	# Tell the NPC to show its prompt
+	npc_in_range.show_prompt()
+	print("Can now interact with: ", npc_in_range.name)
+
+
+
+# This function will also be called by the NPC's script
+# This function is called by the NPC when you walk away
+func player_cannot_interact(npc_node):
+	if npc_in_range == npc_node:
+		# Tell the NPC to hide its prompt
+		npc_in_range.hide_prompt()
+		npc_in_range = null
+		print("Out of range.")
+		
+		
 func play_idle_animation() -> void:
 	# Check the vertical component of the last direction.
 	if last_direction.y > 0.5:
