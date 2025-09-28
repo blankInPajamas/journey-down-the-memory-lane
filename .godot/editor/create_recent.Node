@@ -1,3 +1,4 @@
+TileMapLayer
 HTTPRequest
 Camera2D
 CanvasLayer
@@ -11,5 +12,3 @@ RichTextLabel
 NinePatchRect
 Control
 CollisionShape2D
-Area2D
-StaticBody2D

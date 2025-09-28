@@ -1,2 +1,6 @@
 res://scripts/chat_window.gd
 res://scripts/player.gd
+res://scenes/house_1.tscn
+res://scenes/shed.tscn
+res://scenes/old_house.tscn
+res://scenes/hut_1.tscn
