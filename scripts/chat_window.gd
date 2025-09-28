@@ -4,6 +4,7 @@ extends CanvasLayer
 # This signal will be emitted when the player submits their text.
 # The Player script (or a game manager) will listen for this.
 signal player_spoke(text_input)
+signal conversation_ended
 
 # Connections to the nodes in the scene (your variables are perfect)
 @onready var name_label = $NameLabel
@@ -75,7 +76,17 @@ func _start_typewriter(message: String):
 	continue_indicator.play("point_up")
 	continue_indicator.show()
 
-
+func close_conversation():
+	hide() # Hide the entire UI
+	# Reset all state variables to their default values
+	is_typing = false
+	is_waiting_for_player_input = false
+	# Stop any active timers or animations if you have them
+	# For example, stop the continue_indicator from animating
+	continue_indicator.stop()
+	# Emit the signal so the Player script knows it can move on
+	emit_signal("conversation_ended")
+	
 # This function is called when the player hits Enter in the LineEdit
 func _on_player_text_submitted(text: String):
 	if text.strip_edges().is_empty():

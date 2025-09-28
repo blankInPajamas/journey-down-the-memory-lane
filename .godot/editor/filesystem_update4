@@ -1,3 +1,2 @@
-res://scripts/player.gd
 res://scripts/chat_window.gd
-res://scenes/chat_window.tscn
+res://scripts/player.gd

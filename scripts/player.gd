@@ -100,9 +100,20 @@ func _ready():
 	# Connect to the ChatWindow's custom signal
 	ChatWindow.player_spoke.connect(_on_player_spoke)
 	ollama_request.request_completed.connect(_on_ollama_request_completed)
+	ChatWindow.conversation_ended.connect(_on_conversation_ended)
 
 
+func _on_conversation_ended():
+	# This is crucial! It allows the player to start a new conversation.
+	is_chatting = false
+	print("Conversation ended.")
+	
 func _unhandled_input(event):
+	
+	if Input.is_action_just_pressed("ui_cancel"): # "ui_cancel" is the default for Escape
+		ChatWindow.close_conversation()
+		return
+		
 	if Input.is_action_just_pressed("ui_accept"):
 		if not ChatWindow.is_visible() and npc_in_range != null:
 			start_new_conversation(npc_in_range)
