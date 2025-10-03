@@ -1,3 +1,4 @@
+TileMap
 TileMapLayer
 HTTPRequest
 Camera2D
@@ -11,4 +12,3 @@ Window
 RichTextLabel
 NinePatchRect
 Control
-CollisionShape2D

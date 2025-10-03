@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://cwwf1v2n01x1w"]
+[gd_scene load_steps=26 format=3 uid="uid://btov7ehlygdat"]
 
 [ext_resource type="Script" uid="uid://c32q5lqvpkb7c" path="res://scripts/player.gd" id="1_qhqgy"]
 [ext_resource type="Texture2D" uid="uid://bem5brvjbwqcs" path="res://assets/Ninja Adventure - Asset Pack/Actor/Characters/Boy/SeparateAnim/Idle.png" id="2_dqkch"]
@@ -192,7 +192,7 @@ radius = 7.0
 height = 16.0
 
 [node name="player" type="CharacterBody2D" groups=["Player"]]
-position = Vector2(0, -1)
+position = Vector2(241, 159)
 script = ExtResource("1_qhqgy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -204,4 +204,3 @@ visible = false
 shape = SubResource("CapsuleShape2D_qhqgy")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(5, 5)

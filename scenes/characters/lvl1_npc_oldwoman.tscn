@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bc8awtpchjqq8"]
+[gd_scene load_steps=9 format=3 uid="uid://v4q4uwy51b5s"]
 
 [ext_resource type="Texture2D" uid="uid://3hsi1mmseuhc" path="res://assets/Ninja Adventure - Asset Pack/Actor/Characters/OldWoman/SpriteSheet.png" id="1_ceyfb"]
 [ext_resource type="Script" uid="uid://3h2r07ejjpcn" path="res://scripts/lvl_1_npc_oldwoman.gd" id="1_t3pf1"]
