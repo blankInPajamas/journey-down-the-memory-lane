@@ -1,0 +1,17 @@
+#!/bin/bash
+
+echo "starting ollama"
+
+ollama serve
+echo "starting phi3"
+ollama run phi3
+
+echo "starting openwebui"
+DATA_DIR=~/.open-webui uvx --python 3.11 --with itsdangerous open-webui@latest serve
+
+echo "starting backend server"
+
+cd backend
+source venv/bin/activate
+python backend.py
+
