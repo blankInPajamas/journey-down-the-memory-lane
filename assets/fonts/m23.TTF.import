@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://b1i0g1mpjhfh1"
-path="res://.godot/imported/KodeMono-Medium.ttf-15c54cddab59d16c30d9884acbcf297a.fontdata"
+uid="uid://di76k0r34bfu5"
+path="res://.godot/imported/m23.TTF-46e17a746f37374a9c47054358fe001a.fontdata"
 
 [deps]
 
-source_file="res://fonts/KodeMono-Medium.ttf"
-dest_files=["res://.godot/imported/KodeMono-Medium.ttf-15c54cddab59d16c30d9884acbcf297a.fontdata"]
+source_file="res://assets/fonts/m23.TTF"
+dest_files=["res://.godot/imported/m23.TTF-46e17a746f37374a9c47054358fe001a.fontdata"]
 
 [params]
 
@@ -21,6 +21,7 @@ msdf_pixel_range=8
 msdf_size=48
 allow_system_fallback=true
 force_autohinter=false
+modulate_color_glyphs=false
 hinting=1
 subpixel_positioning=4
 keep_rounding_remainders=true
