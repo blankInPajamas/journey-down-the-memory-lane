@@ -1,0 +1,83 @@
+[gd_scene load_steps=5 format=3 uid="uid://b67hqo3qt6xm3"]
+
+[ext_resource type="Texture2D" uid="uid://c3a43yt3n3h7x" path="res://assets/extra/bg01.jpg" id="1_iymv7"]
+[ext_resource type="FontFile" uid="uid://di76k0r34bfu5" path="res://assets/fonts/m23.TTF" id="2_bhsg3"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_44hxy"]
+font = ExtResource("2_bhsg3")
+font_size = 120
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jv7xg"]
+content_margin_left = 40.0
+content_margin_top = 30.0
+content_margin_right = 40.0
+content_margin_bottom = 30.0
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_top = -217.0
+offset_right = 1278.0
+offset_bottom = 784.0
+texture = ExtResource("1_iymv7")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -453.0
+offset_top = 121.0
+offset_right = 453.0
+offset_bottom = 241.0
+grow_horizontal = 2
+text = "The Journey"
+label_settings = SubResource("LabelSettings_44hxy")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -41.0
+offset_right = 204.0
+offset_bottom = 214.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 45
+
+[node name="Start" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_bhsg3")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_jv7xg")
+text = "Start game"
+
+[node name="Exit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_bhsg3")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_jv7xg")
+text = "Exit
+"

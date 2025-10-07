@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://n6eecpchsjlu"]
+[gd_scene load_steps=19 format=4 uid="uid://n6eecpchsjlu"]
 
 [ext_resource type="Texture2D" uid="uid://db24n5dc2eg47" path="res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/Interior/TilesetInteriorFloor.png" id="1_k3k1i"]
 [ext_resource type="Texture2D" uid="uid://dcxs2xdt8iyja" path="res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/Interior/TilesetInterior.png" id="2_iehp6"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://fggjwu4ovhy" path="res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetHouse.png" id="3_iehp6"]
 [ext_resource type="Texture2D" uid="uid://bkpjphx2fb62n" path="res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/Interior/Elements.png" id="3_socyi"]
 [ext_resource type="PackedScene" uid="uid://btov7ehlygdat" path="res://scenes/characters/player.tscn" id="6_socyi"]
+[ext_resource type="PackedScene" uid="uid://dowiuxgu8exn7" path="res://scenes/characters/woman_npc.tscn" id="7_i4vgx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j5w88"]
 texture = ExtResource("1_k3k1i")
@@ -2549,4 +2550,7 @@ tile_map_data = PackedByteArray("AAAQAAAAAwAGAA0AAAAQAAEAAwAGAA0AAAAQAAIAAwAGAA0
 tile_set = SubResource("TileSet_ygc2y")
 
 [node name="player" parent="." instance=ExtResource("6_socyi")]
-position = Vector2(119, 157)
+position = Vector2(119, 25)
+
+[node name="woman_npc" parent="." instance=ExtResource("7_i4vgx")]
+position = Vector2(182, 16)
