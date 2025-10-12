@@ -1,0 +1,12 @@
+res://journey.tscn
+res://exit_door.gd
+res://house_4_door.gd
+res://player.gd
+res://house_interior.tscn
+res://player.tscn
+res://house_1_interior.tscn
+res://house_3_interior.tscn
+res://house_2_interior.tscn
+res://house_1_door.gd
+res://house_2_door.gd
+res://house_3_door.gd
