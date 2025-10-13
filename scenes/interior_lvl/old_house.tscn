@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://fggjwu4ovhy" path="res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetHouse.png" id="3_iehp6"]
 [ext_resource type="Texture2D" uid="uid://bkpjphx2fb62n" path="res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/Interior/Elements.png" id="3_socyi"]
 [ext_resource type="PackedScene" uid="uid://btov7ehlygdat" path="res://scenes/characters/player.tscn" id="6_socyi"]
-[ext_resource type="PackedScene" uid="uid://dowiuxgu8exn7" path="res://scenes/characters/woman_npc.tscn" id="7_i4vgx"]
+[ext_resource type="PackedScene" uid="uid://dowiuxgu8exn7" path="res://scenes/characters/npc/npc01.tscn" id="7_i4vgx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j5w88"]
 texture = ExtResource("1_k3k1i")

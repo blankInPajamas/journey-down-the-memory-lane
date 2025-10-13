@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://b67hqo3qt6xm3"]
+[gd_scene load_steps=12 format=3 uid="uid://b67hqo3qt6xm3"]
 
+[ext_resource type="Script" uid="uid://wgj2alswbaqx" path="res://scripts/opening.gd" id="1_44hxy"]
 [ext_resource type="Texture2D" uid="uid://c3a43yt3n3h7x" path="res://assets/extra/bg01.jpg" id="1_iymv7"]
 [ext_resource type="FontFile" uid="uid://di76k0r34bfu5" path="res://assets/fonts/m23.TTF" id="2_bhsg3"]
 
@@ -9,16 +10,42 @@ font_size = 120
 font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jv7xg"]
-content_margin_left = 40.0
-content_margin_top = 30.0
-content_margin_right = 40.0
-content_margin_bottom = 30.0
+content_margin_left = 20.0
+content_margin_top = 20.0
+content_margin_right = 20.0
+content_margin_bottom = 20.0
 bg_color = Color(1, 1, 1, 1)
 border_width_left = 5
 border_width_top = 5
 border_width_right = 5
 border_width_bottom = 5
 border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_44hxy"]
+bg_color = Color(0.12156863, 0.12156863, 0.12156863, 0.76862746)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+
+[sub_resource type="LabelSettings" id="LabelSettings_jv7xg"]
+font = ExtResource("2_bhsg3")
+font_size = 60
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_mo4m4"]
+color = Color(1, 1, 1, 1)
+grow_begin = 0.0
+grow_end = 0.0
+thickness = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gfveh"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gkdca"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xcy2s"]
+font = ExtResource("2_bhsg3")
+font_size = 25
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -27,57 +54,147 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_44hxy")
 
 [node name="Background" type="TextureRect" parent="."]
 layout_mode = 0
-offset_top = -217.0
-offset_right = 1278.0
-offset_bottom = 784.0
+offset_top = -181.0
+offset_right = 1284.0
+offset_bottom = 737.0
 texture = ExtResource("1_iymv7")
+expand_mode = 1
 
-[node name="Label" type="Label" parent="."]
+[node name="Title" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -453.0
-offset_top = 121.0
-offset_right = 453.0
-offset_bottom = 241.0
+offset_left = -449.0
+offset_top = 99.0
+offset_right = 457.0
+offset_bottom = 219.0
 grow_horizontal = 2
 text = "The Journey"
 label_settings = SubResource("LabelSettings_44hxy")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 7
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -200.0
-offset_top = -41.0
-offset_right = 204.0
-offset_bottom = 214.0
+anchor_bottom = 1.0
+offset_left = -168.0
+offset_top = -394.0
+offset_right = 172.0
+offset_bottom = 5.0
 grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = 45
+grow_vertical = 0
+theme_override_constants/separation = 25
 
 [node name="Start" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_bhsg3")
-theme_override_font_sizes/font_size = 45
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_jv7xg")
 text = "Start game"
+
+[node name="Settings" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_bhsg3")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_jv7xg")
+text = "Settings"
 
 [node name="Exit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_bhsg3")
-theme_override_font_sizes/font_size = 45
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_jv7xg")
 text = "Exit
 "
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -376.0
+offset_top = -251.0
+offset_right = 372.0
+offset_bottom = 289.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_44hxy")
+
+[node name="Options" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -140.0
+offset_right = 140.0
+offset_bottom = 154.0
+grow_horizontal = 2
+text = "Options"
+label_settings = SubResource("LabelSettings_jv7xg")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Back" type="Button" parent="Panel"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -56.0
+offset_top = -124.0
+offset_right = 56.0
+offset_bottom = -59.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_bhsg3")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_jv7xg")
+text = "Back"
+
+[node name="HSlider" type="HSlider" parent="Panel"]
+layout_mode = 0
+offset_left = 332.0
+offset_top = 248.0
+offset_right = 703.0
+offset_bottom = 264.0
+theme_override_styles/slider = SubResource("StyleBoxLine_mo4m4")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_gfveh")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_gkdca")
+value = 50.0
+rounded = true
+
+[node name="Audio volume" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 95.0
+offset_top = 243.0
+offset_right = 302.0
+offset_bottom = 268.0
+text = "Audio volume"
+label_settings = SubResource("LabelSettings_xcy2s")
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Panel/Back" to="." method="_on_back_pressed"]

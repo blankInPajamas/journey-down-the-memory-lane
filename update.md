@@ -15,3 +15,17 @@
 4. Working on windmill:
     a. Added the assets
     b. Collision (to be done)
+
+---
+
+14 OCTOBER:
+
+1. Finished opening screen
+
+2. Added settings panel
+
+3. Added objectives screen
+
+4. Made 4 choice option box
+
+5. Made 5 different NPCs

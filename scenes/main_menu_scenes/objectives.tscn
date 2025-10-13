@@ -1,0 +1,99 @@
+[gd_scene load_steps=7 format=3 uid="uid://bvql6ncm12i2b"]
+
+[ext_resource type="Texture2D" uid="uid://c4jh8diubkjf3" path="res://assets/Ninja Adventure - Asset Pack/Ui/Dialog/ChoiceBox.png" id="1_3vywo"]
+[ext_resource type="Script" uid="uid://bwbk0p5ga8mrp" path="res://scripts/objectives.gd" id="1_mvnkb"]
+[ext_resource type="FontFile" uid="uid://di76k0r34bfu5" path="res://assets/fonts/m23.TTF" id="2_iofoh"]
+[ext_resource type="Texture2D" uid="uid://dedul5dt0tjiw" path="res://assets/Ninja Adventure - Asset Pack/Ui/Theme/Theme Wood/arrow_left_hover.png" id="2_mvnkb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iofoh"]
+content_margin_left = 15.0
+content_margin_top = 15.0
+content_margin_right = 15.0
+content_margin_bottom = 15.0
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_oe6l2"]
+font = ExtResource("2_iofoh")
+font_size = 70
+font_color = Color(0, 0, 0, 1)
+
+[node name="Objectives" type="Node2D"]
+script = ExtResource("1_mvnkb")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1282.0
+offset_bottom = 720.0
+color = Color(0, 0, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 65.0
+offset_top = 388.0
+offset_right = 265.0
+offset_bottom = 654.0
+theme_override_constants/separation = 25
+
+[node name="map" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(250, 70)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_iofoh")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_iofoh")
+text = "Maps"
+
+[node name="inv" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(250, 70)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_iofoh")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_iofoh")
+text = "Inventory"
+
+[node name="obj" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(250, 70)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_iofoh")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_iofoh")
+text = "Objectives"
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+offset_left = 380.0
+offset_top = 50.0
+offset_right = 1225.0
+offset_bottom = 661.0
+texture = ExtResource("1_3vywo")
+region_rect = Rect2(0.012205124, 0.1556549, 64.14223, 19.843632)
+patch_margin_left = 27
+patch_margin_top = 9
+patch_margin_right = 31
+patch_margin_bottom = 8
+
+[node name="Label" type="Label" parent="NinePatchRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -170.5
+offset_top = 33.0
+offset_right = 170.5
+offset_bottom = 83.0
+grow_horizontal = 2
+text = "Objectives"
+label_settings = SubResource("LabelSettings_oe6l2")
+
+[node name="Back_Arrow" type="TextureButton" parent="."]
+offset_left = 78.0
+offset_top = 62.0
+offset_right = 146.0
+offset_bottom = 131.0
+texture_normal = ExtResource("2_mvnkb")
+stretch_mode = 0
+
+[connection signal="pressed" from="Back_Arrow" to="." method="_on_back_arrow_pressed"]

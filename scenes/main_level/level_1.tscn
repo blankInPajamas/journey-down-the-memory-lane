@@ -19,7 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://cetramvpwofvp" path="res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetRelief.png" id="17_xuiri"]
 [ext_resource type="Texture2D" uid="uid://dcxs2xdt8iyja" path="res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/Interior/TilesetInterior.png" id="18_dglle"]
 [ext_resource type="Texture2D" uid="uid://codk0h6arph37" path="res://assets/Ninja Adventure - Asset Pack/Backgrounds/Animated/MillPropeller/MillPropeller_B_64x64.png" id="19_5fdoj"]
-[ext_resource type="PackedScene" uid="uid://v4q4uwy51b5s" path="res://scenes/characters/lvl1_npc_oldwoman.tscn" id="20_43lte"]
+[ext_resource type="PackedScene" uid="uid://v4q4uwy51b5s" path="res://scenes/characters/npc/lvl1_npc_oldwoman.tscn" id="20_43lte"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s7g0b"]
 texture = ExtResource("1_ta0i5")

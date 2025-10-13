@@ -1,0 +1,90 @@
+[gd_scene load_steps=11 format=3 uid="uid://cyau715ovmts1"]
+
+[ext_resource type="Script" uid="uid://bqsjmbdl58r3b" path="res://scripts/npc/woman-npc.gd" id="1_v5tkh"]
+[ext_resource type="Texture2D" uid="uid://dykfuk64dapgg" path="res://assets/Ninja Adventure - Asset Pack/Actor/Characters/Eskimo/SeparateAnim/Idle.png" id="2_v5tkh"]
+[ext_resource type="Texture2D" uid="uid://b7mmq2xmb27k7" path="res://assets/Ninja Adventure - Asset Pack/Ui/Input/Keyboard/KeyE.png" id="3_6scs3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xs2k0"]
+atlas = ExtResource("2_v5tkh")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6scs3"]
+atlas = ExtResource("2_v5tkh")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3f12m"]
+atlas = ExtResource("2_v5tkh")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wtrdc"]
+atlas = ExtResource("2_v5tkh")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ahtjv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xs2k0")
+}],
+"loop": true,
+"name": &"look_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6scs3")
+}],
+"loop": true,
+"name": &"look_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3f12m")
+}],
+"loop": true,
+"name": &"look_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wtrdc")
+}],
+"loop": true,
+"name": &"look_up",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rxgvk"]
+size = Vector2(16, 15)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7accx"]
+size = Vector2(47.5, 45.5)
+
+[node name="eskimo_npc" type="CharacterBody2D"]
+script = ExtResource("1_v5tkh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(8, 8)
+sprite_frames = SubResource("SpriteFrames_ahtjv")
+animation = &"look_up"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8, 8.5)
+shape = SubResource("RectangleShape2D_rxgvk")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(8, 9)
+shape = SubResource("RectangleShape2D_7accx")
+
+[node name="InteractPrompt" type="TextureRect" parent="."]
+visible = false
+offset_left = 5.0
+offset_top = -12.0
+offset_right = 12.0
+offset_bottom = -5.0
+texture = ExtResource("3_6scs3")
+expand_mode = 1
