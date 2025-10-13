@@ -11,9 +11,12 @@ config_version=5
 [application]
 
 config/name="The Journey"
+
+run/main_scene="uid://bgqlmh37kjmsq"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
 [rendering]
 
 renderer/rendering_method="forward_plus"
+
