@@ -1,24 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://dowiuxgu8exn7"]
+[gd_scene load_steps=9 format=3 uid="uid://dowiuxgu8exn7"]
 
 [ext_resource type="Script" uid="uid://bqsjmbdl58r3b" path="res://scripts/npc/woman-npc.gd" id="1_dnqrr"]
 [ext_resource type="Texture2D" uid="uid://n51im74120sb" path="res://assets/Ninja Adventure - Asset Pack/Actor/Characters/Woman/SeparateAnim/Idle.png" id="2_ajtmy"]
+[ext_resource type="Texture2D" uid="uid://bipxh5132ir4i" path="res://assets/Ninja Adventure - Asset Pack/Actor/Characters/Woman/Faceset.png" id="2_evi0x"]
 [ext_resource type="Texture2D" uid="uid://b7mmq2xmb27k7" path="res://assets/Ninja Adventure - Asset Pack/Ui/Input/Keyboard/KeyE.png" id="3_ajtmy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_evi0x"]
 atlas = ExtResource("2_ajtmy")
 region = Rect2(0, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vlesk"]
-atlas = ExtResource("2_ajtmy")
-region = Rect2(32, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_igvup"]
-atlas = ExtResource("2_ajtmy")
-region = Rect2(48, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_n118g"]
-atlas = ExtResource("2_ajtmy")
-region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ahtjv"]
 animations = [{
@@ -29,30 +18,6 @@ animations = [{
 "loop": true,
 "name": &"look_down",
 "speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vlesk")
-}],
-"loop": true,
-"name": &"look_left",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_igvup")
-}],
-"loop": true,
-"name": &"look_right",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_n118g")
-}],
-"loop": true,
-"name": &"look_up",
-"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rxgvk"]
@@ -61,30 +26,34 @@ size = Vector2(16, 15)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7accx"]
 size = Vector2(47.5, 45.5)
 
-[node name="woman_npc" type="CharacterBody2D"]
+[node name="woman_npc" type="StaticBody2D"]
 script = ExtResource("1_dnqrr")
+npc_name = "Seraphina"
+portrait_texture = ExtResource("2_evi0x")
+persona = "Seraphina is a thorough cynic, believing that everyone is driven by self-interest. Her personality is sharp, sarcastic, and purely business-oriented. She is always looking for an angle to profit and views kindness with suspicion. Her demeanor is impatient and dismissive unless she senses an opportunity for gain, at which point she becomes deceptively friendly. (speak only in-character dialogue, never exceed 30 words)"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(8, 8)
 sprite_frames = SubResource("SpriteFrames_ahtjv")
-animation = &"look_up"
+animation = &"look_down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(8, 8.5)
 shape = SubResource("RectangleShape2D_rxgvk")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="chatdetection" type="Area2D" parent="."]
 collision_layer = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chatdetection"]
+visible = false
 position = Vector2(8, 9)
 shape = SubResource("RectangleShape2D_7accx")
 
-[node name="InteractPrompt" type="TextureRect" parent="."]
+[node name="InteractionPrompt" type="Sprite2D" parent="."]
 visible = false
-offset_left = 5.0
-offset_top = -12.0
-offset_right = 12.0
-offset_bottom = -5.0
+position = Vector2(8, -9)
 texture = ExtResource("3_ajtmy")
-expand_mode = 1
+
+[connection signal="body_entered" from="chatdetection" to="." method="_on_chatdetection_body_entered"]
+[connection signal="body_exited" from="chatdetection" to="." method="_on_chatdetection_body_exited"]

@@ -1,10 +1,15 @@
-res://assets/Ninja Adventure - Asset Pack/Ui/Input/Keyboard
+res://assets/Ninja Adventure - Asset Pack/Actor/Characters/Woman
 res://scenes/characters
+res://assets/Ninja Adventure - Asset Pack/Actor/Characters/FighterWhite
+res://assets/Ninja Adventure - Asset Pack/Actor/Characters/Monk
+res://assets/Ninja Adventure - Asset Pack/Actor/Characters/Master
+res://assets/Ninja Adventure - Asset Pack/Actor/Characters/Hunter
+res://assets/Ninja Adventure - Asset Pack/Actor/Characters/Villager3
+res://assets/Ninja Adventure - Asset Pack/Actor/Characters/OldMan
 res://scripts/npc
+res://assets/Ninja Adventure - Asset Pack/Ui/Input/Keyboard
 res://assets/Ninja Adventure - Asset Pack/Actor/Characters/Woman/SeparateAnim
-res://assets/fonts
 res://scenes/main_menu_scenes
-res://assets/extra
 res://assets/Ninja Adventure - Asset Pack/Ui
 res://scenes
 res://assets/Ninja Adventure - Asset Pack/Actor/Characters/OldWoman

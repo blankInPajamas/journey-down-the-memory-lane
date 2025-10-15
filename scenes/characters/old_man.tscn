@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=3 uid="uid://byxnn6ncwcyy5"]
+
+[ext_resource type="Script" uid="uid://drvbikk1yftis" path="res://scripts/npc/old_man.gd" id="1_53e0g"]
+[ext_resource type="Texture2D" uid="uid://bhtg3u88d64si" path="res://assets/Ninja Adventure - Asset Pack/Actor/Characters/OldMan/SpriteSheet.png" id="1_vcb4m"]
+[ext_resource type="Texture2D" uid="uid://b6ycsgevylkyb" path="res://assets/Ninja Adventure - Asset Pack/Actor/Characters/OldMan/Faceset.png" id="2_7nurp"]
+[ext_resource type="Texture2D" uid="uid://b7mmq2xmb27k7" path="res://assets/Ninja Adventure - Asset Pack/Ui/Input/Keyboard/KeyE.png" id="4_im43k"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6un41"]
+atlas = ExtResource("1_vcb4m")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ns3m7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6un41")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i5cb6"]
+radius = 5.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v75tn"]
+radius = 15.033297
+
+[node name="old_man" type="StaticBody2D"]
+script = ExtResource("1_53e0g")
+npc_name = "Kael"
+portrait_texture = ExtResource("2_7nurp")
+persona = "Kael is a man weathered into silence by grief. He is a stoic observer who rarely speaks, preferring the company of the sea to that of people. His demeanor is melancholic and withdrawn, and he seems lost in memories of a painful past. While he is not unkind, his profound sadness makes him unapproachable and reluctant to engage with others. (speak only in-character dialogue, never exceed 30 words)"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-12, -12)
+sprite_frames = SubResource("SpriteFrames_ns3m7")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-11, -9)
+shape = SubResource("CircleShape2D_i5cb6")
+
+[node name="chatdetection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chatdetection"]
+visible = false
+position = Vector2(-12, -11)
+shape = SubResource("CircleShape2D_v75tn")
+
+[node name="InteractionPrompt" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-11, -26.000004)
+scale = Vector2(0.5769231, 0.5769231)
+texture = ExtResource("4_im43k")
+
+[connection signal="body_entered" from="chatdetection" to="." method="_on_chatdetection_body_entered"]
+[connection signal="body_exited" from="chatdetection" to="." method="_on_chatdetection_body_exited"]

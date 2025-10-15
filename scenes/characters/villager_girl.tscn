@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=3 uid="uid://b7mrrlf8twbe8"]
+
+[ext_resource type="Script" uid="uid://8wtq1ul1k6ik" path="res://scripts/npc/villager1.gd" id="1_k6pxq"]
+[ext_resource type="Texture2D" uid="uid://dinqik8m7uiqt" path="res://assets/Ninja Adventure - Asset Pack/Actor/Characters/Villager3/Faceset.png" id="2_u42n6"]
+[ext_resource type="Texture2D" uid="uid://bq72s10s4wyd3" path="res://assets/Ninja Adventure - Asset Pack/Actor/Characters/Villager3/SpriteSheet.png" id="3_1afgc"]
+[ext_resource type="Texture2D" uid="uid://b7mmq2xmb27k7" path="res://assets/Ninja Adventure - Asset Pack/Ui/Input/Keyboard/KeyE.png" id="4_8ad61"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qhr8c"]
+atlas = ExtResource("3_1afgc")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ns3m7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qhr8c")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i5cb6"]
+radius = 5.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v75tn"]
+radius = 15.033297
+
+[node name="villager_girl" type="StaticBody2D"]
+script = ExtResource("1_k6pxq")
+npc_name = "Elara"
+portrait_texture = ExtResource("2_u42n6")
+persona = "Maeve is the heart of the village, embodying naive optimism and genuine kindness. Her personality is sweet, open, and utterly without guile. She is friendly to everyone and sees the best in people, which can make her vulnerable. Her demeanor is cheerful and trusting, and she often shares information freely, unaware of its potential significance. (speak only in-character dialogue, never exceed 30 words)"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-12, -12)
+sprite_frames = SubResource("SpriteFrames_ns3m7")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-11, -9)
+shape = SubResource("CircleShape2D_i5cb6")
+
+[node name="chatdetection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chatdetection"]
+visible = false
+position = Vector2(-12, -11)
+shape = SubResource("CircleShape2D_v75tn")
+
+[node name="InteractionPrompt" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-11, -26.000004)
+scale = Vector2(0.5769231, 0.5769231)
+texture = ExtResource("4_8ad61")
+
+[connection signal="body_entered" from="chatdetection" to="." method="_on_chatdetection_body_entered"]
+[connection signal="body_exited" from="chatdetection" to="." method="_on_chatdetection_body_exited"]

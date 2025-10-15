@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=3 uid="uid://cc1qrrx1o2xc"]
+
+[ext_resource type="Script" uid="uid://mu6636afue70" path="res://scripts/npc/monk.gd" id="1_8icvp"]
+[ext_resource type="Texture2D" uid="uid://pv5vewpqq52l" path="res://assets/Ninja Adventure - Asset Pack/Actor/Characters/Monk/Faceset.png" id="2_o4mlt"]
+[ext_resource type="Texture2D" uid="uid://bhcgfl27k3kxl" path="res://assets/Ninja Adventure - Asset Pack/Actor/Characters/Monk/SpriteSheet.png" id="3_vwfsv"]
+[ext_resource type="Texture2D" uid="uid://b7mmq2xmb27k7" path="res://assets/Ninja Adventure - Asset Pack/Ui/Input/Keyboard/KeyE.png" id="4_7kooe"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wcnp6"]
+atlas = ExtResource("3_vwfsv")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ns3m7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wcnp6")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i5cb6"]
+radius = 5.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v75tn"]
+radius = 15.033297
+
+[node name="monk" type="StaticBody2D"]
+script = ExtResource("1_8icvp")
+npc_name = "Brother Theron"
+portrait_texture = ExtResource("2_o4mlt")
+persona = "Brother Theron is a gentle and scholarly soul. He is wise and articulate, often speaking in thoughtful, preachy statements that reveal his monastic background. His demeanor is calm, patient, and deeply contemplative. Though he carries the weight of a hidden past, he is eager to share his knowledge with those he deems worthy, acting as a serene and insightful guide. (speak only in-character dialogue, never exceed 30 words) "
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-12, -12)
+sprite_frames = SubResource("SpriteFrames_ns3m7")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-11, -9)
+shape = SubResource("CircleShape2D_i5cb6")
+
+[node name="chatdetection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chatdetection"]
+visible = false
+position = Vector2(-12, -11)
+shape = SubResource("CircleShape2D_v75tn")
+
+[node name="InteractionPrompt" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-11, -26.000004)
+scale = Vector2(0.5769231, 0.5769231)
+texture = ExtResource("4_7kooe")
+
+[connection signal="body_entered" from="chatdetection" to="." method="_on_chatdetection_body_entered"]
+[connection signal="body_exited" from="chatdetection" to="." method="_on_chatdetection_body_exited"]

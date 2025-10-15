@@ -1,0 +1,57 @@
+Streamside Village: Locations & Inhabitants
+Overall Atmosphere
+
+Streamside is a small, weathered fishing village where a freshwater stream meets the sea. The air is thick with the scent of brine, damp wood, and river reeds. The village feels isolated, a place where secrets are kept close. The central feature is the stream itself, crossed by a sturdy stone bridge that connects the two halves of the hamlet.
+Locations: West Bank
+Outdoor Area: West Bank
+
+The main path on the west bank is well-trodden dirt. Near the docks, Kael, the stoic old fisherman, can often be found mending his nets or silently watching the water. He was on the sea when the storm hit and carries a deep sense of unease. A small campfire pit with log stumps sits unused, a sign of the village's current tension.
+
+    Artifact: Tucked into a coil of rope on the side of Kael's boat is a Hand-Carved Wooden Fish Lure, exquisitely detailed and made from a type of wood not found in this region.
+
+1. Lord Alistair's House
+
+This is the largest and best-kept house in the village, belonging to the irritable landlord, Lord Alistair. Made of river stone and sturdy timber, its windows seem to watch the village suspiciously. A tidy garden of cabbages grows out front, tended to by others.
+
+    Interior: The Main Hall
+    The ground floor is Alistair's private hall. A large dining table sits in the top-left corner, often with only one place set. A heavy wooden dresser holds fine, mismatched earthenware. Alistair is usually here, impatiently pacing or examining his ledgers. Also present are Elara, his terrified housekeeper, who polishes furniture with trembling hands, and Maeve, a naive villager girl who tends to the indoor plants, often humming quietly to herself.
+
+    Artifact: Resting on the corner of the wooden dresser is a small, tarnished Silver Locket. It clicks open to reveal one empty side and a faded portrait of a young, unfamiliar man on the other.
+
+2. The Merchant's Shed
+
+Attached to the main house, this large shed has been converted into a makeshift shop by Seraphina, the cynical merchant. Nets hang on the exterior walls, but the door is propped open, revealing wares for sale. The air smells of fish, salt, and Seraphina's cheap perfume.
+
+    Interior: The Shop
+    Inside, the space is a cluttered marketplace. A long table serves as a counter, displaying various goods. Barrels and baskets hold fish, vegetables, and salvaged items. Finn, a hardworking and loyal villager, is often here, trading his catch with Seraphina and complaining about the prices.
+
+    Artifact: Half-hidden under a pile of old ropes is a Soggy, Salt-Stained Pouch containing a few heavy coins bearing the unfamiliar mark of a falcon.
+
+3. The Dilapidated House
+
+Set back from the river and partially hidden by trees, this small, crumbling cottage is where the player awakens. A thin plume of smoke always rises from the chimney. A bundle of crow feathers and dried seaweed hangs on the door handle, a ward against unwelcomed visitors.
+
+    Interior: The Herbalist's Study
+    The inside is the surprisingly orderly home of Brenna, the mysterious herbalist. The back wall is lined with bookshelves filled with esoteric tomes. A large table is used for study, and a cauldron bubbles with a soft, blue light. Brenna, the player's rescuer, is usually here, reading a heavy book or stirring her pot, her sharp eyes missing nothing.
+
+    Artifact: Left open on the central table is a heavy tome filled with astronomical charts. Tucked inside is a single, pressed Glimmering Nightshade Blossom, which feels unnaturally cool to the touch.
+
+Locations: East Bank
+Outdoor Area: East Bank
+
+A dirt path forks after the bridge. One branch winds up a slope towards the Old Windmill. Near a large tree stump that serves as a chopping block, Silas, the fierce village hunter, can almost always be found splitting logs with a powerful axe, his gaze often fixed on the sea.
+
+    Artifact: Embedded in the top of the chopping block is a rusty, but finely crafted Old Iron Key, its head shaped like a coiled serpent.
+
+1. The Old Windmill
+
+Standing on a low hill, the windmill is the village's most prominent landmark. Its stone base is strong, with moss growing on its north face. The four massive sails are weathered and turn with a slow, steady creak.
+
+    Interior: The Secret Library
+    The windmill's interior is a magnificent and ancient library, the hidden sanctuary of Brother Theron, the wise and preachy monk. Countless bookshelves line the circular walls, filled with leather-bound volumes on history, navigation, and theology. Stone furnaces provide warmth. Brother Theron is usually here, meticulously studying sea charts or ancient texts, deeply troubled by the unnatural storm he witnessed.
+
+    Artifact: On one of the reading tables, a book on weather patterns has been left open. Protruding from its pages is an ornate, bronze Feather-Shaped Bookmark, which is strangely warm.
+
+2. The Storage Sheds (x2)
+
+These two simple sheds stand near the base of the windmill, used for storing village supplies. One is a woodshed, stacked high with Silas's firewood. The other is a larder, holding cured meats and barrels of ale.

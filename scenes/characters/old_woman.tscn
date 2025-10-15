@@ -1,19 +1,18 @@
-[gd_scene load_steps=9 format=3 uid="uid://bc8awtpchjqq8"]
+[gd_scene load_steps=8 format=3 uid="uid://bnqfe4yaxgid6"]
 
-[ext_resource type="Texture2D" uid="uid://3hsi1mmseuhc" path="res://assets/Ninja Adventure - Asset Pack/Actor/Characters/OldWoman/SpriteSheet.png" id="1_ceyfb"]
-[ext_resource type="Script" uid="uid://3h2r07ejjpcn" path="res://scripts/npc/lvl_1_npc_oldwoman.gd" id="1_t3pf1"]
-[ext_resource type="Texture2D" uid="uid://d377r0075tya7" path="res://assets/Ninja Adventure - Asset Pack/Actor/Characters/OldWoman/Faceset.png" id="2_i5cb6"]
-[ext_resource type="Texture2D" uid="uid://b7mmq2xmb27k7" path="res://assets/Ninja Adventure - Asset Pack/Ui/Input/Keyboard/KeyE.png" id="3_ns3m7"]
+[ext_resource type="Script" uid="uid://8wtq1ul1k6ik" path="res://scripts/npc/villager1.gd" id="1_3q3of"]
+[ext_resource type="Texture2D" uid="uid://bq72s10s4wyd3" path="res://assets/Ninja Adventure - Asset Pack/Actor/Characters/Villager3/SpriteSheet.png" id="2_c653v"]
+[ext_resource type="Texture2D" uid="uid://b7mmq2xmb27k7" path="res://assets/Ninja Adventure - Asset Pack/Ui/Input/Keyboard/KeyE.png" id="4_vt5hd"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_t3pf1"]
-atlas = ExtResource("1_ceyfb")
+[sub_resource type="AtlasTexture" id="AtlasTexture_qhr8c"]
+atlas = ExtResource("2_c653v")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ns3m7"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_t3pf1")
+"texture": SubResource("AtlasTexture_qhr8c")
 }],
 "loop": true,
 "name": &"idle",
@@ -26,9 +25,8 @@ radius = 5.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_v75tn"]
 radius = 15.033297
 
-[node name="old_woman" type="StaticBody2D"]
-script = ExtResource("1_t3pf1")
-portrait_texture = ExtResource("2_i5cb6")
+[node name="villager_girl" type="StaticBody2D"]
+script = ExtResource("1_3q3of")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-12, -12)
@@ -51,7 +49,7 @@ shape = SubResource("CircleShape2D_v75tn")
 visible = false
 position = Vector2(-11, -26.000004)
 scale = Vector2(0.5769231, 0.5769231)
-texture = ExtResource("3_ns3m7")
+texture = ExtResource("4_vt5hd")
 
 [connection signal="body_entered" from="chatdetection" to="." method="_on_chatdetection_body_entered"]
 [connection signal="body_exited" from="chatdetection" to="." method="_on_chatdetection_body_exited"]

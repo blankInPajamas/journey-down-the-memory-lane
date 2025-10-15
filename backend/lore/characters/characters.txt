@@ -1,0 +1,142 @@
+Streamside Amnesia: Plot & Character Dossier
+Main Plot
+
+The player awakens on a simple cot inside a dusty, herb-scented, dilapidated house. They have no memory of who they are, where they came from, or how they arrived. The first person they see is Brenna, a mysterious old woman who found them unconscious on the shore.
+
+The player's goal is to piece together their identity and the events that led to their memory loss. This can only be achieved by speaking to the inhabitants of Streamside village. Each villager holds a piece of the puzzle, but their willingness to share information will depend on the player's actions, conversation choices, and their ability to build trust. The game revolves around navigating complex relationships, uncovering secrets, and ultimately confronting the truth of the player's past.
+The Central Mystery: What Happened to the Player?
+
+The player, whose real name is Caspian, was a royal courier. They were shipwrecked during a violent, unnatural storm while carrying a sealed letter of great political importance from a neighboring kingdom. The letter contained a peace treaty proposal, but a faction within Caspian's own kingdom wanted a war to break out. This faction hired assassins to intercept the message.
+
+The assassins' ship attacked Caspian's vessel near Streamside. In the ensuing chaos, Caspian fought bravely but was wounded and knocked overboard. The assassins, believing Caspian drowned and the letter was lost to the sea, retreated. Caspian washed ashore, battered and without memories, where Brenna discovered them. The sealed letter, protected by a waterproof oilskin pouch, is still with them, though they don't know its significance. The villagers witnessed the storm and the wreckage, but each saw or heard something different, and their interpretations are colored by their own biases and secrets.
+Character Profiles
+
+Here are the nine villagers the player will interact with.
+1. Brenna, the Herbalist
+
+    Location: The Dilapidated House
+
+    Core Personality Archetype: The Guardian
+
+    Relationship to Player's Past: The Rescuer. She found the player on the beach and knows the most about their initial condition but is wary of revealing too much too soon, fearing it might endanger them.
+
+    Patience Level: 9/10
+
+    Trust Level (Initial): 60%
+
+    Volatility: Low
+
+    Secretiveness: 8/10
+
+2. Lord Alistair, the Landlord
+
+    Location: The Fisherman's House (Manor)
+
+    Core Personality Archetype: The Pragmatist
+
+    Relationship to Player's Past: The Opportunist. He saw the shipwreck and salvaged some of the wreckage, finding a signet ring that suggests the player is a person of high status. He is trying to figure out how to profit from the situation.
+
+    Patience Level: 2/10
+
+    Trust Level (Initial): 10%
+
+    Volatility: High
+
+    Secretiveness: 9/10
+
+3. Silas, the Hunter
+
+    Location: Outdoor Area: East Bank
+
+    Core Personality Archetype: The Protector
+
+    Relationship to Player's Past: The Witness. While hunting, he saw the distant naval battle before the storm hit. He suspects the player is a soldier or someone involved in a serious conflict and views them with deep suspicion.
+
+    Patience Level: 4/10
+
+    Trust Level (Initial): 20%
+
+    Volatility: Medium
+
+    Secretiveness: 7/10
+
+4. Brother Theron, the Monk
+
+    Location: The Old Windmill (Library)
+
+    Core Personality Archetype: The Scholar
+
+    Relationship to Player's Past: The Observer. He is a disgraced monk in hiding. He studies maps and shipping lanes and knows the storm that shipwrecked the player was unnatural. He fears it was caused by dark magic.
+
+    Patience Level: 8/10
+
+    Trust Level (Initial): 40%
+
+    Volatility: Low
+
+    Secretiveness: 6/10
+
+5. Seraphina, the Merchant
+
+    Location: The Fishing Shed (Shop)
+
+    Core Personality Archetype: The Cynic
+
+    Relationship to Player's Past: The Scavenger. She bought some salvaged items from Lord Alistair, including a waterlogged journal she hasn't been able to read. She believes the player is nothing but trouble.
+
+    Patience Level: 3/10
+
+    Trust Level (Initial): 15%
+
+    Volatility: Medium
+
+    Secretiveness: 5/10
+
+6. Kael, the Old Fisherman
+
+    Location: Outdoor Area: West Bank (Docks)
+
+    Core Personality Archetype: The Stoic
+
+    Relationship to Player's Past: The Listener. His fishing boat was out on the water when the storm rolled in. He didn't see the fight but heard sounds of battle carried on the wind. He keeps to himself but will share his story if he feels the player is trustworthy.
+
+    Patience Level: 6/10
+
+    Trust Level (Initial): 30%
+
+    Volatility: Low
+
+    Secretiveness: 4/10
+
+7. Maeve, the Villager Girl
+
+    Location: The Fisherman's House (Manor)
+
+    Core Personality Archetype: The Optimist
+
+    Relationship to Player's Past: Secret Admirer. She saw the unconscious and handsome player being carried into Brenna's cottage and has developed a naive infatuation. She overhears much of what Lord Alistair says and might let slip important details without realizing it.
+
+    Patience Level: 9/10
+
+    Trust Level (Initial): 70%
+
+    Volatility: Low
+
+    Secretiveness: 2/10
+
+8. Finn, the Hardworking Villager
+
+    Location: The Fishing Shed / Docks
+
+    Core Personality Archetype: The Loyalist
+
+    Relationship to Player's Past: The Bystander. He saw the wreckage wash ashore the morning after the storm. He's a simple man, fiercely loyal to the village and wary of outsiders who might bring trouble.
+
+    Patience Level: 5/10
+
+    Trust Level (Initial): 50%
+
+    Volatility: Medium
+
+    Secretiveness: 3/10
+

@@ -1,10 +1,10 @@
 extends StaticBody2D
 
 # Get a reference to the prompt node
-@export var npc_name: String = "Woman"
+@export var npc_name: String = "Villager Girl"
 @export var portrait_texture: Texture2D
-@export var initial_greeting: String = "Hey, there, you don't look familiar"
-@export_multiline var persona: String = "You are a helpful person"
+@export var initial_greeting: String = "Hello, traveller. You look new here."
+@export_multiline var persona: String = "You are a naive young girl"
 
 	
 @onready var interaction_prompt = $InteractionPrompt

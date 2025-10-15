@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://d072fa2v1v6ep"
-path="res://.godot/imported/KodeMono-SemiBold.ttf-2651b78e9be824f4629f55a6efdecf73.fontdata"
+uid="uid://co6ysfhwlj837"
+path="res://.godot/imported/KodeMono-Bold.ttf-cdeb7fab93e3215a0cbde68d290af73a.fontdata"
 
 [deps]
 
-source_file="res://fonts/KodeMono-SemiBold.ttf"
-dest_files=["res://.godot/imported/KodeMono-SemiBold.ttf-2651b78e9be824f4629f55a6efdecf73.fontdata"]
+source_file="res://the-journey/fonts/KodeMono-Bold.ttf"
+dest_files=["res://.godot/imported/KodeMono-Bold.ttf-cdeb7fab93e3215a0cbde68d290af73a.fontdata"]
 
 [params]
 
@@ -21,6 +21,7 @@ msdf_pixel_range=8
 msdf_size=48
 allow_system_fallback=true
 force_autohinter=false
+modulate_color_glyphs=false
 hinting=1
 subpixel_positioning=4
 keep_rounding_remainders=true

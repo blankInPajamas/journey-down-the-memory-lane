@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=3 uid="uid://dlbfs61rs8cyu"]
+
+[ext_resource type="Script" uid="uid://44hm0du6fe1" path="res://scripts/npc/hunter.gd" id="1_wi05q"]
+[ext_resource type="Texture2D" uid="uid://dlxfjlecdq3bb" path="res://assets/Ninja Adventure - Asset Pack/Actor/Characters/Hunter/Faceset.png" id="2_18gpe"]
+[ext_resource type="Texture2D" uid="uid://bf5tqf552xxns" path="res://assets/Ninja Adventure - Asset Pack/Actor/Characters/Hunter/SpriteSheet.png" id="3_ilgri"]
+[ext_resource type="Texture2D" uid="uid://b7mmq2xmb27k7" path="res://assets/Ninja Adventure - Asset Pack/Ui/Input/Keyboard/KeyE.png" id="4_j2id7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_38dbb"]
+atlas = ExtResource("3_ilgri")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ns3m7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_38dbb")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i5cb6"]
+radius = 5.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v75tn"]
+radius = 15.033297
+
+[node name="hunter" type="StaticBody2D"]
+script = ExtResource("1_wi05q")
+npc_name = "Silas"
+portrait_texture = ExtResource("2_18gpe")
+persona = "Silas is the fierce protector of Streamside. He is gruff, suspicious of all outsiders, and communicates with blunt, direct language. His demeanor is intimidating and watchful, as he constantly scans his surroundings for threats. Beneath his harsh exterior lies a deep-seated loyalty to the village, but his protective instincts make him slow to trust and quick to judge. (speak only in character dialogue, never exceed 30 words)"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-12, -12)
+sprite_frames = SubResource("SpriteFrames_ns3m7")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-11, -9)
+shape = SubResource("CircleShape2D_i5cb6")
+
+[node name="chatdetection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chatdetection"]
+visible = false
+position = Vector2(-12, -11)
+shape = SubResource("CircleShape2D_v75tn")
+
+[node name="InteractionPrompt" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-11, -26.000004)
+scale = Vector2(0.5769231, 0.5769231)
+texture = ExtResource("4_j2id7")
+
+[connection signal="body_entered" from="chatdetection" to="." method="_on_chatdetection_body_entered"]
+[connection signal="body_exited" from="chatdetection" to="." method="_on_chatdetection_body_exited"]

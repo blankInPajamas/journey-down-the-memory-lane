@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://v4q4uwy51b5s"]
 
 [ext_resource type="Texture2D" uid="uid://3hsi1mmseuhc" path="res://assets/Ninja Adventure - Asset Pack/Actor/Characters/OldWoman/SpriteSheet.png" id="1_ceyfb"]
-[ext_resource type="Script" uid="uid://3h2r07ejjpcn" path="res://scripts/lvl_1_npc_oldwoman.gd" id="1_t3pf1"]
+[ext_resource type="Script" uid="uid://3h2r07ejjpcn" path="res://scripts/npc/lvl_1_npc_oldwoman.gd" id="1_t3pf1"]
 [ext_resource type="Texture2D" uid="uid://d377r0075tya7" path="res://assets/Ninja Adventure - Asset Pack/Actor/Characters/OldWoman/Faceset.png" id="2_i5cb6"]
 [ext_resource type="Texture2D" uid="uid://b7mmq2xmb27k7" path="res://assets/Ninja Adventure - Asset Pack/Ui/Input/Keyboard/KeyE.png" id="3_ns3m7"]
 
@@ -28,7 +28,9 @@ radius = 15.033297
 
 [node name="old_woman" type="StaticBody2D"]
 script = ExtResource("1_t3pf1")
+npc_name = "Brenna"
 portrait_texture = ExtResource("2_i5cb6")
+persona = "Brenna is the village's mysterious guardian. She carries an air of ancient wisdom and speaks in calm, measured tones. While she is fundamentally kind and protective, especially towards the player, she is also highly secretive. She holds her knowledge close, only sharing what she deems necessary, making her seem enigmatic and cautious. Her demeanor is patient and observant, as if she's constantly weighing the consequences of every word. (speak only in-character dialogue, never exceed 30 words)"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-12, -12)

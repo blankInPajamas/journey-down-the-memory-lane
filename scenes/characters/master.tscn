@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=3 uid="uid://wqi5pc8j78b2"]
+
+[ext_resource type="Script" uid="uid://bdabih65ui4ma" path="res://scripts/npc/master.gd" id="1_65q8v"]
+[ext_resource type="Texture2D" uid="uid://d2muk241jykur" path="res://assets/Ninja Adventure - Asset Pack/Actor/Characters/Master/Faceset.png" id="2_5fw1w"]
+[ext_resource type="Texture2D" uid="uid://dnsmsmk28gumo" path="res://assets/Ninja Adventure - Asset Pack/Actor/Characters/Master/SpriteSheet.png" id="3_hw2f1"]
+[ext_resource type="Texture2D" uid="uid://b7mmq2xmb27k7" path="res://assets/Ninja Adventure - Asset Pack/Ui/Input/Keyboard/KeyE.png" id="4_bg4qd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ped0q"]
+atlas = ExtResource("3_hw2f1")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ns3m7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ped0q")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i5cb6"]
+radius = 5.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v75tn"]
+radius = 15.033297
+
+[node name="master" type="StaticBody2D"]
+script = ExtResource("1_65q8v")
+npc_name = "Alistair"
+portrait_texture = ExtResource("2_5fw1w")
+persona = "Lord Alistair is a man defined by his greed and impatience. He is arrogant, irritable, and views the villagers with disdain, seeing them merely as sources of income. His demeanor is perpetually sour and dismissive, and he has no time for pleasantries. Every interaction with him is transactional; he is always calculating how a situation can benefit him, making him untrustworthy and manipulative. (speak only in-character dialogue, never exceed 30 words)"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-12, -12)
+sprite_frames = SubResource("SpriteFrames_ns3m7")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-11, -9)
+shape = SubResource("CircleShape2D_i5cb6")
+
+[node name="chatdetection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chatdetection"]
+visible = false
+position = Vector2(-12, -11)
+shape = SubResource("CircleShape2D_v75tn")
+
+[node name="InteractionPrompt" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-11, -26.000004)
+scale = Vector2(0.5769231, 0.5769231)
+texture = ExtResource("4_bg4qd")
+
+[connection signal="body_entered" from="chatdetection" to="." method="_on_chatdetection_body_entered"]
+[connection signal="body_exited" from="chatdetection" to="." method="_on_chatdetection_body_exited"]

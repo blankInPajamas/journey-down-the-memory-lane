@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://dn7ocoa82drmh"
-path="res://.godot/imported/KodeMono-Regular.ttf-9c7dc175d9fcb7aad9c5588b050a2d6b.fontdata"
+path="res://.godot/imported/KodeMono-Regular.ttf-235d8d86ef52a23d5338812191b7b60f.fontdata"
 
 [deps]
 
-source_file="res://fonts/KodeMono-Regular.ttf"
-dest_files=["res://.godot/imported/KodeMono-Regular.ttf-9c7dc175d9fcb7aad9c5588b050a2d6b.fontdata"]
+source_file="res://the-journey/fonts/KodeMono-Regular.ttf"
+dest_files=["res://.godot/imported/KodeMono-Regular.ttf-235d8d86ef52a23d5338812191b7b60f.fontdata"]
 
 [params]
 
@@ -21,6 +21,7 @@ msdf_pixel_range=8
 msdf_size=48
 allow_system_fallback=true
 force_autohinter=false
+modulate_color_glyphs=false
 hinting=1
 subpixel_positioning=4
 keep_rounding_remainders=true
