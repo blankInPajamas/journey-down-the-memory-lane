@@ -11,14 +11,14 @@ config_version=5
 [application]
 
 config/name="The Journey Final Work"
-run/main_scene="uid://oa5dks7v4rmo"
+run/main_scene="uid://dfbqo82wl74p6"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 ChatWindow="*res://scenes/chat_window.tscn"
-scenemanager="*res://scenemanager.gd"
+scenemanager="*res://scripts/scenemanager.gd"
 Globaltraits="*res://scripts/player_global/globaltraits.gd"
 Global="*res://scripts/global.gd"
 

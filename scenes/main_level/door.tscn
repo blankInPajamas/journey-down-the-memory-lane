@@ -21,5 +21,7 @@ visible = false
 position = Vector2(1, -15)
 texture = ExtResource("2_go5ye")
 
+[node name="Spawn" type="Marker2D" parent="."]
+
 [connection signal="body_entered" from="entrancedetection" to="." method="_on_body_entered"]
 [connection signal="body_exited" from="entrancedetection" to="." method="_on_body_exited"]

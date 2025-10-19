@@ -1,11 +1,13 @@
-[gd_scene load_steps=18 format=4 uid="uid://n6eecpchsjlu"]
+[gd_scene load_steps=20 format=4 uid="uid://n6eecpchsjlu"]
 
 [ext_resource type="Texture2D" uid="uid://db24n5dc2eg47" path="res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/Interior/TilesetInteriorFloor.png" id="1_k3k1i"]
 [ext_resource type="Texture2D" uid="uid://dcxs2xdt8iyja" path="res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/Interior/TilesetInterior.png" id="2_iehp6"]
 [ext_resource type="Texture2D" uid="uid://dlg1bunlq0ne2" path="res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetElement.png" id="2_yxvvj"]
 [ext_resource type="Texture2D" uid="uid://fggjwu4ovhy" path="res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetHouse.png" id="3_iehp6"]
 [ext_resource type="Texture2D" uid="uid://bkpjphx2fb62n" path="res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/Interior/Elements.png" id="3_socyi"]
+[ext_resource type="PackedScene" uid="uid://btov7ehlygdat" path="res://scenes/characters/player.tscn" id="6_socyi"]
 [ext_resource type="PackedScene" uid="uid://v4q4uwy51b5s" path="res://scenes/characters/lvl1_npc_oldwoman.tscn" id="7_i4vgx"]
+[ext_resource type="PackedScene" uid="uid://onigrg5enq16" path="res://scenes/main_level/door.tscn" id="8_junob"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j5w88"]
 texture = ExtResource("1_k3k1i")
@@ -2550,3 +2552,10 @@ tile_set = SubResource("TileSet_ygc2y")
 
 [node name="old_woman" parent="." instance=ExtResource("7_i4vgx")]
 position = Vector2(69, 37)
+
+[node name="player" parent="." instance=ExtResource("6_socyi")]
+position = Vector2(117, 159)
+
+[node name="Door" parent="." instance=ExtResource("8_junob")]
+position = Vector2(120, 173)
+destination_level_tag = "level1"

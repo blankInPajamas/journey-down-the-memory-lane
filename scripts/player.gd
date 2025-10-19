@@ -11,7 +11,6 @@ var is_chatting = false
 
 var door_in_range = null
 
-@onready var camera = $Camera2D
 
 # --- NEW Functions for door interaction ---
 
@@ -114,21 +113,19 @@ func _physics_process(delta: float) -> void:
 
 func _ready():
 	# Connect to the ChatWindow's custom signal
+	scenemanager.on_trigger_player_spawn.connect(_on_spawn)
 	
-	camera.make_current()
+	
 	
 	ChatWindow.player_spoke.connect(_on_player_spoke)
 	ollama_request.request_completed.connect(_on_ollama_request_completed)
 	ChatWindow.conversation_ended.connect(_on_conversation_ended)
 	
-	if not scenemanager.next_spawn_name.is_empty():
-		var spawn_point = get_tree().get_root().find_child(scenemanager.next_spawn_name, true, false)
-		if spawn_point:
-			# Move the player to the spawn point's position
-			global_position = spawn_point.global_position
-		# Clear the spawn name so it doesn't get reused
-		scenemanager.next_spawn_name = ""
 
+func _on_spawn(position: Vector2):
+	global_position=position
+	
+	
 
 func _on_conversation_ended():
 	# This is crucial! It allows the player to start a new conversation.
@@ -146,7 +143,8 @@ func _unhandled_input(event):
 			start_new_conversation(npc_in_range)
 		elif not is_chatting and door_in_range != null:
 			# Use the global SceneManager to switch scenes
-			scenemanager.switch_scene(door_in_range.target_scene_path, door_in_range.target_spawn_name)
+			print("knock on door")
+			scenemanager.go_to_level(door_in_range.destination_level_tag, door_in_range.destination_door_tag)
 		# The logic for closing the window should now be handled inside ChatWindow.gd
 	
 func update_animation(direction: Vector2) -> void:
