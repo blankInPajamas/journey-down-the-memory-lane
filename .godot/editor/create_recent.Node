@@ -1,9 +1,10 @@
+AnimatedSprite2D
 Sprite2D
+Marker2D
 StaticBody2D
 TextureRect
 CollisionShape2D
 Area2D
-AnimatedSprite2D
 CharacterBody2D
 Button
 VBoxContainer
@@ -11,4 +12,3 @@ Label
 Node2D
 TileMap
 TileMapLayer
-HTTPRequest

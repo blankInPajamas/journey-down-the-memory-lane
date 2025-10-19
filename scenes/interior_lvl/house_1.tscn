@@ -11,8 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://bljmfugifavy0" path="res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetNature.png" id="9_1rw8q"]
 [ext_resource type="Texture2D" uid="uid://dcxs2xdt8iyja" path="res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/Interior/TilesetInterior.png" id="9_84lmt"]
 [ext_resource type="Texture2D" uid="uid://bkpjphx2fb62n" path="res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/Interior/Elements.png" id="10_uhueh"]
-[ext_resource type="PackedScene" uid="uid://btov7ehlygdat" path="res://scenes/characters/player.tscn" id="12_3l87p"]
 [ext_resource type="PackedScene" uid="uid://wqi5pc8j78b2" path="res://scenes/characters/master.tscn" id="13_3l87p"]
+[ext_resource type="PackedScene" uid="uid://onigrg5enq16" path="res://scenes/main_level/door.tscn" id="13_kbegk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o7ioy"]
 texture = ExtResource("1_ki3t3")
@@ -4622,8 +4622,13 @@ tile_set = SubResource("TileSet_2i72f")
 tile_map_data = PackedByteArray("AAACAAgAAAAdAAoAAAADAAgAAAAeAAoAAAAEAAgAAAAfAAoAAAATAAMAAAAdABEAAAASAAgAAAAGAAQAAAATAAgAAAAHAAQAAAAJAP7/BgAGAAgAAAAKAP7/BgAHAAgAAAAHAP3/BgACAAcAAAAJAP3/BgAGAAcAAAAKAP3/BgAHAAcAAAAMAP3/AAAWABQAAAAMAP7/AAAWABUAAAAHAP7/BgACAAgAAAAHAA0ABgAAAAcAAAAHAA4ABgAAAAgAAAANAA0ABgAAAAcAAAANAA4ABgAAAAgAAAAKAAwABgAMAAQAADAKAAsABgAMAAQAAAALAAsABgAMAAQAABALAAwABgAMAAQAADAHAAgAAAAdAAkAAAAHAAcAAAAdAAgAAAAIAAcAAAAeAAgAAAAIAAgAAAAeAAkAAAAJAAgABgAOAAAAAAABAAEABgAMAAQAAGABAAIABgAMAAQAAGABAAMABgAMAAQAAGACAAAABgANAAQAAAACAAEABgANAAUAAAACAAIABgANAAUAAAACAAMABgANAAYAAAACAAQABgALAAMAAAADAAAABgANAAQAAAADAAEABgANAAUAAAADAAIABgANAAUAAAADAAMABgANAAYAAAADAAQABgAMAAMAAAAEAAAABgANAAQAAAAEAAEABgANAAUAAAAEAAIABgANAAUAAAAEAAMABgANAAYAAAAEAAQABgANAAMAAAAFAAEABgAMAAQAAFAFAAIABgAMAAQAAHAFAAMABgAMAAQAAFAFAAQABgACAAkAAAABAAAABgAMAAQAAGACAP//BgALAAIAAAADAP//BgAMAAIAAAAEAP//BgANAAIAAAAFAAAABgAMAAQAAHD///7/BgAGAAAAABD//wUABgAAAAcAAAD//wYABgAAAAgAAAABAAgAAAAdAA8AAAABAAsAAAAVAA4AAAACAAsAAAAgAA8AABADAAsAAAAgAA8AAAAEAAsAAAARAA0AAAAVAAkAAAAPABAAAAAVAAQABgAAAAcAAAAVAAUABgAAAAgAAAAVAAEAAAAUABIAAAASAAEABgAEAAkAAAAOAAEAAAAVAA4AAAAMAAQABgADAAoAAAANAAQABgAEAAoAAAAOAAQABgAAAAkAABAKAAQABgAAAAkAAAALAAQABgAEAAoAABARAAYAAAAeAAoAAAAQAAYAAAAdAAoAAAASAAwAAAAfAAwAAAASAA0AAAAfAA0AAAASAA4AAAAfAA4AAAATAAwAAAAgAAwAAAATAA0AAAAgAA0AAAATAA4AAAAgAA4AAAAJAAsABgAMAAQAAAAJAAwABgAMAAQAADA=")
 tile_set = SubResource("TileSet_pol71")
 
-[node name="player" parent="." instance=ExtResource("12_3l87p")]
-position = Vector2(168, 253)
-
 [node name="master" parent="." instance=ExtResource("13_3l87p")]
 position = Vector2(118, 37)
+
+[node name="SpawnFromWorld" type="Marker2D" parent="."]
+position = Vector2(168, 253)
+
+[node name="Door" parent="." instance=ExtResource("13_kbegk")]
+position = Vector2(168, 278)
+target_scene_path = "res://scenes/main_level/level_1.tscn"
+target_spawn_name = "SpawnFromHouse1"

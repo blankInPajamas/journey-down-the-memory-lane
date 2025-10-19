@@ -45,7 +45,6 @@ shape = SubResource("CircleShape2D_i5cb6")
 [node name="chatdetection" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="chatdetection"]
-visible = false
 position = Vector2(-12, -11)
 shape = SubResource("CircleShape2D_v75tn")
 

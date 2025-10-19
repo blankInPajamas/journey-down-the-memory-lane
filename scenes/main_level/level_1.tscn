@@ -7011,11 +7011,14 @@ tile_set = SubResource("TileSet_3x5jj")
 tile_map_data = PackedByteArray("AAAMABgAAQAYABAAAAAMABkAAQAYABEAAAAMABoAAQAYABIAAAAKABYAAwAAAAkAAAALABYAAwADAAkAAABBABkABAAHAAMAAHBBABwABAAEAAMAAHBEABoABAAGAAAAAHBBABsABAAFAAMAAHBBABoABAAGAAMAAHBCABwABAAEAAIAAHBCABsABAAFAAIAAHBCABoABAAGAAIAAHBCABkABAAHAAIAAHBDABwABAAEAAEAAHBDABsABAAFAAEAAHBDABoABAAGAAEAAHBDABkABAAHAAEAAHBEABwABAAEAAAAAHBEABsABAAFAAAAAHA=")
 tile_set = SubResource("TileSet_qb2q0")
 
-[node name="Overlap Areas" parent="." instance=ExtResource("21_dnc0a")]
-position = Vector2(-585, 13)
-
 [node name="old_man" parent="." instance=ExtResource("21_d5dmn")]
 position = Vector2(903, 383)
 
 [node name="hunter" parent="." instance=ExtResource("22_4i28d")]
 position = Vector2(732, 117)
+
+[node name="Door" parent="." instance=ExtResource("21_dnc0a")]
+position = Vector2(48, 109)
+
+[node name="SpawnFromHouse1" type="Marker2D" parent="."]
+position = Vector2(49, 131)

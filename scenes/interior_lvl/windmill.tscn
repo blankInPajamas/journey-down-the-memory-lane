@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://dsiuu2827dpp2"]
+[gd_scene load_steps=26 format=4 uid="uid://dsiuu2827dpp2"]
 
 [ext_resource type="Texture2D" uid="uid://db24n5dc2eg47" path="res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/Interior/TilesetInteriorFloor.png" id="1_lbv3c"]
 [ext_resource type="Texture2D" uid="uid://u1g86737741d" path="res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetDesert.png" id="2_u7qke"]
@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://dlg1bunlq0ne2" path="res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetElement.png" id="5_6268u"]
 [ext_resource type="Texture2D" uid="uid://fbirv431ctp6" path="res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetDungeon.png" id="6_gapfo"]
 [ext_resource type="Texture2D" uid="uid://c6u1fbi4rrjnx" path="res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/Interior/TilesetWallSimple.png" id="7_x2vvo"]
-[ext_resource type="PackedScene" uid="uid://btov7ehlygdat" path="res://scenes/characters/player.tscn" id="8_7k7fv"]
 [ext_resource type="PackedScene" uid="uid://cc1qrrx1o2xc" path="res://scenes/characters/monk.tscn" id="9_1dpkf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gp6o4"]
@@ -3925,9 +3924,6 @@ tile_set = SubResource("TileSet_5kac0")
 [node name="extra" type="TileMapLayer" parent="TileMap"]
 tile_map_data = PackedByteArray("AAAMAP3/AAAAAAgAAAAGAPv/AAAHAAkAAAAJAP7/AAAGAAkAACAKAP7/AAAKAAAAAAALAPv/AAAHAAkAAAAMAPv/AAAHAAkAAAAMAPz/AAAAAAcAAAAPAPz/AAAAAAcAAAAPAP3/AAAAAAgAAAAQAPv/AAAHAAkAAAAQAP7/AAAFAAkAAAARAPv/AAAHAAkAAAAUAP7/AAAOAAAAAAAVAPv/AAAHAAkAAAAVAP7/AAAGAAoAAAAWAPv/AAAHAAkAAAAWAP7/AAAOAAAAAAAaAP3/AAAAAAcAAAAaAP7/AAAAAAgAAAAbAPv/AAAHAAkAAAAcAPv/AAAHAAkAAAAfAP3/AAAAAAcAAAAfAP7/AAAAAAgAAAD//wAAAAAAAAcAAAD//wEAAAAAAAgAAAA=")
 tile_set = SubResource("TileSet_2geix")
-
-[node name="player" parent="." instance=ExtResource("8_7k7fv")]
-position = Vector2(256, 200)
 
 [node name="monk" parent="." instance=ExtResource("9_1dpkf")]
 position = Vector2(102, -3)

@@ -27,7 +27,7 @@ func _ready():
 	continue_indicator.hide()
 
 	# Connectthe PlayerInput's signal to a function in this script
-	player_input.text_submitted.connect(_on_player_text_submitted)
+	#player_input.text_submitted.connect(_on_player_text_submitted)
 
 # --- PUBLIC FUNCTIONS ---
 

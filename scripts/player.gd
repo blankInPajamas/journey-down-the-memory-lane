@@ -1,12 +1,28 @@
 # Player.gd
 extends CharacterBody2D
 
+
 # Exporting the variable allows you to change the speed in the Inspector.
 @export var speed: float = 100.0
 var conversation_history = [] # Stores the entire conversation
 var npc_persona = "" # Stores the NPC's core personality prompt
 var is_chatting = false
 @onready var ollama_request = ChatWindow.get_node("OllamaRequest")
+
+var door_in_range = null
+
+@onready var camera = $Camera2D
+
+# --- NEW Functions for door interaction ---
+
+func can_interact_with_door(door_node):
+	door_in_range = door_node
+	door_in_range.show_prompt()
+
+func cannot_interact_with_door(door_node):
+	if door_in_range == door_node:
+		door_in_range.hide_prompt()
+		door_in_range = null
 
 # --- This function starts a NEW conversation ---
 func start_new_conversation(npc_node):
@@ -98,9 +114,20 @@ func _physics_process(delta: float) -> void:
 
 func _ready():
 	# Connect to the ChatWindow's custom signal
+	
+	camera.make_current()
+	
 	ChatWindow.player_spoke.connect(_on_player_spoke)
 	ollama_request.request_completed.connect(_on_ollama_request_completed)
 	ChatWindow.conversation_ended.connect(_on_conversation_ended)
+	
+	if not scenemanager.next_spawn_name.is_empty():
+		var spawn_point = get_tree().get_root().find_child(scenemanager.next_spawn_name, true, false)
+		if spawn_point:
+			# Move the player to the spawn point's position
+			global_position = spawn_point.global_position
+		# Clear the spawn name so it doesn't get reused
+		scenemanager.next_spawn_name = ""
 
 
 func _on_conversation_ended():
@@ -117,8 +144,11 @@ func _unhandled_input(event):
 	if Input.is_action_just_pressed("ui_accept"):
 		if not ChatWindow.is_visible() and npc_in_range != null:
 			start_new_conversation(npc_in_range)
-	# The logic for closing the window should now be handled inside ChatWindow.gd
-			
+		elif not is_chatting and door_in_range != null:
+			# Use the global SceneManager to switch scenes
+			scenemanager.switch_scene(door_in_range.target_scene_path, door_in_range.target_spawn_name)
+		# The logic for closing the window should now be handled inside ChatWindow.gd
+	
 func update_animation(direction: Vector2) -> void:
 	# If the player is not moving, play the idle animation.
 	if direction == Vector2.ZERO:

@@ -7,15 +7,19 @@
 size = Vector2(45, 41.5)
 
 [node name="Door" type="Node2D"]
+position = Vector2(204, 57)
 script = ExtResource("1_vgso6")
 
-[node name="a1" type="Area2D" parent="."]
+[node name="entrancedetection" type="Area2D" parent="."]
+position = Vector2(1, 0)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="a1"]
-position = Vector2(632.5, 98.25)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="entrancedetection"]
 shape = SubResource("RectangleShape2D_35hlq")
 
 [node name="InteractionPrompt" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(632, 88)
+position = Vector2(1, -15)
 texture = ExtResource("2_go5ye")
+
+[connection signal="body_entered" from="entrancedetection" to="." method="_on_body_entered"]
+[connection signal="body_exited" from="entrancedetection" to="." method="_on_body_exited"]
