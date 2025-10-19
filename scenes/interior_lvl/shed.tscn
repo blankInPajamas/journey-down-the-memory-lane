@@ -1,10 +1,11 @@
-[gd_scene load_steps=17 format=4 uid="uid://dbs0yihg3kuy4"]
+[gd_scene load_steps=18 format=4 uid="uid://dbs0yihg3kuy4"]
 
 [ext_resource type="Texture2D" uid="uid://db24n5dc2eg47" path="res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/Interior/TilesetInteriorFloor.png" id="1_kx8ok"]
 [ext_resource type="Texture2D" uid="uid://4s0a3jmk2hvc" path="res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetFloor.png" id="2_204wa"]
 [ext_resource type="Texture2D" uid="uid://dlg1bunlq0ne2" path="res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetElement.png" id="2_tnmrx"]
 [ext_resource type="Texture2D" uid="uid://fggjwu4ovhy" path="res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetHouse.png" id="3_204wa"]
 [ext_resource type="Texture2D" uid="uid://du55d3asoftok" path="res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetVillageAbandoned.png" id="5_j5w88"]
+[ext_resource type="PackedScene" uid="uid://bhq5712xpc54g" path="res://scenes/characters/villager_boy.tscn" id="6_lkbpp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gbkui"]
 texture = ExtResource("1_kx8ok")
@@ -2777,3 +2778,6 @@ tile_set = SubResource("TileSet_t01aa")
 [node name="extra" type="TileMapLayer" parent="furniture"]
 tile_map_data = PackedByteArray("AAAHAAIAAAAIAAIAAAANAAQAAAAKAAIAABARAAEAAAAHAAQAAAA=")
 tile_set = SubResource("TileSet_2nhl3")
+
+[node name="villager2" parent="." instance=ExtResource("6_lkbpp")]
+position = Vector2(195, 53)

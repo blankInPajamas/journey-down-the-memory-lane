@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://co6ysfhwlj837"
-path="res://.godot/imported/KodeMono-Bold.ttf-cdeb7fab93e3215a0cbde68d290af73a.fontdata"
+path="res://.godot/imported/KodeMono-Bold.ttf-ce23156d9eff9091a2723941e52fcc8f.fontdata"
 
 [deps]
 
-source_file="res://the-journey/fonts/KodeMono-Bold.ttf"
-dest_files=["res://.godot/imported/KodeMono-Bold.ttf-cdeb7fab93e3215a0cbde68d290af73a.fontdata"]
+source_file="res://fonts/KodeMono-Bold.ttf"
+dest_files=["res://.godot/imported/KodeMono-Bold.ttf-ce23156d9eff9091a2723941e52fcc8f.fontdata"]
 
 [params]
 

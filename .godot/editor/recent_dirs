@@ -1,3 +1,5 @@
+res://assets/Ninja Adventure - Asset Pack/Ui/Input/Keyboard
+res://scenes/main_level
 res://assets/Ninja Adventure - Asset Pack/Actor/Characters/Woman
 res://scenes/characters
 res://assets/Ninja Adventure - Asset Pack/Actor/Characters/FighterWhite
@@ -7,7 +9,6 @@ res://assets/Ninja Adventure - Asset Pack/Actor/Characters/Hunter
 res://assets/Ninja Adventure - Asset Pack/Actor/Characters/Villager3
 res://assets/Ninja Adventure - Asset Pack/Actor/Characters/OldMan
 res://scripts/npc
-res://assets/Ninja Adventure - Asset Pack/Ui/Input/Keyboard
 res://assets/Ninja Adventure - Asset Pack/Actor/Characters/Woman/SeparateAnim
 res://scenes/main_menu_scenes
 res://assets/Ninja Adventure - Asset Pack/Ui

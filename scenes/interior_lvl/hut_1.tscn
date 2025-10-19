@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://b1b8brje6n72p"]
+[gd_scene load_steps=16 format=4 uid="uid://b1b8brje6n72p"]
 
 [ext_resource type="Texture2D" uid="uid://4s0a3jmk2hvc" path="res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetFloor.png" id="1_upa1y"]
 [ext_resource type="Texture2D" uid="uid://dlg1bunlq0ne2" path="res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetElement.png" id="2_luyto"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://fggjwu4ovhy" path="res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetHouse.png" id="4_mkyxa"]
 [ext_resource type="Texture2D" uid="uid://by5d33rff4525" path="res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetFloorDetail.png" id="5_33e6j"]
 [ext_resource type="PackedScene" uid="uid://btov7ehlygdat" path="res://scenes/characters/player.tscn" id="6_luyto"]
+[ext_resource type="PackedScene" uid="uid://b7mrrlf8twbe8" path="res://scenes/characters/villager_girl.tscn" id="7_1l56k"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p8q5l"]
 texture = ExtResource("1_upa1y")
@@ -1442,3 +1443,6 @@ tile_set = SubResource("TileSet_xyope")
 
 [node name="player" parent="." instance=ExtResource("6_luyto")]
 position = Vector2(129, 154)
+
+[node name="villager_girl" parent="." instance=ExtResource("7_1l56k")]
+position = Vector2(125, 70)
