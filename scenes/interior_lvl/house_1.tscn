@@ -1,5 +1,6 @@
-[gd_scene load_steps=34 format=4 uid="uid://cky8nsble7220"]
+[gd_scene load_steps=36 format=4 uid="uid://cky8nsble7220"]
 
+[ext_resource type="Script" uid="uid://crgggfqhapnek" path="res://scripts/interior/house_1.gd" id="1_kbegk"]
 [ext_resource type="Texture2D" uid="uid://by5d33rff4525" path="res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetFloorDetail.png" id="1_ki3t3"]
 [ext_resource type="Texture2D" uid="uid://4s0a3jmk2hvc" path="res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetFloor.png" id="2_w2xca"]
 [ext_resource type="Texture2D" uid="uid://6vyrl04say7m" path="res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetFloorB.png" id="3_v2t40"]
@@ -4601,7 +4602,11 @@ sources/4 = SubResource("TileSetAtlasSource_3417i")
 sources/6 = SubResource("TileSetAtlasSource_8s02b")
 sources/7 = SubResource("TileSetAtlasSource_dchdp")
 
+[sub_resource type="LabelSettings" id="LabelSettings_3w6u5"]
+paragraph_spacing = -10.0
+
 [node name="House1" type="Node2D"]
+script = ExtResource("1_kbegk")
 
 [node name="TileMap" type="TileMap" parent="."]
 format = 2
@@ -4623,7 +4628,49 @@ tile_map_data = PackedByteArray("AAACAAgAAAAdAAoAAAADAAgAAAAeAAoAAAAEAAgAAAAfAAo
 tile_set = SubResource("TileSet_pol71")
 
 [node name="player" parent="." instance=ExtResource("12_3l87p")]
-position = Vector2(168, 253)
+position = Vector2(170, 47)
 
 [node name="master" parent="." instance=ExtResource("13_3l87p")]
 position = Vector2(118, 37)
+
+[node name="UI_Layer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="UI_Layer"]
+custom_minimum_size = Vector2(200, 50)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -581.0
+offset_top = -166.0
+offset_right = 582.0
+offset_bottom = -45.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="UI_Layer/Panel"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 11.0
+offset_right = 120.0
+offset_bottom = 34.0
+text = "You woke up just now. Use up, down, left and right arrow keys to move. 
+
+Go to the man towards to the left and talk with him."
+label_settings = SubResource("LabelSettings_3w6u5")
+
+[node name="Label2" type="Label" parent="UI_Layer/Panel"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -181.0
+offset_top = -39.0
+offset_right = -21.0
+offset_bottom = -16.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Press F to proceed...."

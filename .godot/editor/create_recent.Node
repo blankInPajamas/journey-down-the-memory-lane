@@ -1,6 +1,8 @@
+Label
+Panel
+CanvasLayer
 Button
 HBoxContainer
-Label
 TextureRect
 NinePatchRect
 ColorRect
@@ -10,5 +12,3 @@ StaticBody2D
 CollisionShape2D
 Area2D
 AnimatedSprite2D
-CharacterBody2D
-Node2D

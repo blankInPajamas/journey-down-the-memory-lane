@@ -52,4 +52,4 @@ func _input(event: InputEvent) -> void:
 			_type_text(text02)
 		elif current_step == 3:
 			# proceed to next scene (replace with actual scene transition)
-			pass
+			get_tree().change_scene_to_file("res://scenes/main_menu_scenes/personality_screen.tscn")

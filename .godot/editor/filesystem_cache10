@@ -1,10 +1,10 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1760871825
+::res://::1760896749
 phi3.txt::TextFile::-1::1760867073::0::1::::<><><>0<>0<><>::
 README.md::TextFile::-1::1760867071::0::1::::<><><>0<>0<><>::
-update.md::TextFile::-1::1760867212::0::1::::<><><>0<>0<><>::
+update.md::TextFile::-1::1760874375::0::1::::<><><>0<>0<><>::
 ::res://assets/::1760867975
-::res://assets/extra/::1760872478
+::res://assets/extra/::1760872482
 personality_bg.jpg::CompressedTexture2D::7563424283301393097::1760872479::1760872482::1::::<><><>0<>0<>f96803a6e7f5e4b0620bba63bf8ee1df<>res://.godot/imported/personality_bg.jpg-7b56a1b5e3972c671653be059ec78dad.ctex::
 start_bg.jpg::CompressedTexture2D::256901420548794334::1760867947::1760867950::1::::<><><>0<>0<>8372d5a66b4af6e6845ca654eb99f609<>res://.godot/imported/start_bg.jpg-a0a103227b97e0a07453629b3bb2aa2b.ctex::
 ::res://assets/fonts/::1760868023
@@ -2396,11 +2396,12 @@ the-accident.txt::TextFile::-1::1760867073::0::1::::<><><>0<>0<><>::
 artifacts.txt::TextFile::-1::1760867073::0::1::::<><><>0<>0<><>::
 ::res://backend/lore/locations/::1760867073
 stream_side.txt::TextFile::-1::1760867073::0::1::::<><><>0<>0<><>::
-::res://fonts/::1760867293
+::res://fonts/::1760896888
 KodeMono-Bold.ttf::FontFile::5820970515256245332::1760867073::1760867293::1::::<><><>0<>0<>80c23869786b9d62decbcf620c03cbbe<>res://.godot/imported/KodeMono-Bold.ttf-ce23156d9eff9091a2723941e52fcc8f.fontdata::
 KodeMono-Medium.ttf::FontFile::4229375664735608516::1760867073::1760867293::1::::<><><>0<>0<>04d4aeafd595c3856e7a771c583a4c6d<>res://.godot/imported/KodeMono-Medium.ttf-15c54cddab59d16c30d9884acbcf297a.fontdata::
 KodeMono-Regular.ttf::FontFile::8138631452852667339::1760867073::1760867293::1::::<><><>0<>0<>0c4093c1ef664c08698411c216805a1f<>res://.godot/imported/KodeMono-Regular.ttf-9c7dc175d9fcb7aad9c5588b050a2d6b.fontdata::
 KodeMono-SemiBold.ttf::FontFile::8981691560633713851::1760867073::1760867293::1::::<><><>0<>0<>d3c83bffeff1685c766c5c816ac7c298<>res://.godot/imported/KodeMono-SemiBold.ttf-2651b78e9be824f4629f55a6efdecf73.fontdata::
+Pixellari.ttf::FontFile::2763277786547047149::1760896888::1760896920::1::::<><><>0<>0<>3b426afdaa1c4aae59e5e764e223b55f<>res://.godot/imported/Pixellari.ttf-ae6de562dd0f260a35f431e66b4dd67f.fontdata::
 ::res://scenes/::1760867073
 chat_window.tscn::PackedScene::3435458657420312520::1760867073::0::1::::<><><>0<>0<><>::uid://cc5q6nfkp7f11::::res://scripts/chat_window.gd<>uid://b42vbrocmppbn::::res://assets/Ninja Adventure - Asset Pack/Ui/Dialog/DialogBoxFaceset.png<>uid://d04opxkfjpx0d::::res://assets/Ninja Adventure - Asset Pack/Ui/Dialog/DialogueBoxSimple.png<>uid://d377r0075tya7::::res://assets/Ninja Adventure - Asset Pack/Actor/Characters/OldWoman/Faceset.png<>uid://cgx7kx33t88rq::::res://assets/Ninja Adventure - Asset Pack/Ui/Arrow.png
 lvl1_npc_oldwoman.tscn::PackedScene::2594963145535363129::1760867073::0::1::::<><><>0<>0<><>::uid://3hsi1mmseuhc::::res://assets/Ninja Adventure - Asset Pack/Actor/Characters/OldWoman/SpriteSheet.png<>uid://3h2r07ejjpcn::::res://scripts/npc/lvl_1_npc_oldwoman.gd<>uid://d377r0075tya7::::res://assets/Ninja Adventure - Asset Pack/Actor/Characters/OldWoman/Faceset.png<>uid://b7mmq2xmb27k7::::res://assets/Ninja Adventure - Asset Pack/Ui/Input/Keyboard/KeyE.png
@@ -2426,9 +2427,11 @@ windmill.tscn::PackedScene::8440427784708446093::1760867073::0::1::::<><><>0<>0<
 ::res://scenes/main_level/::1760867073
 door.tscn::PackedScene::1009978075975508923::1760867073::0::1::::<><><>0<>0<><>::uid://cj83jdhs5bbhc::::res://scripts/door.gd<>uid://b7mmq2xmb27k7::::res://assets/Ninja Adventure - Asset Pack/Ui/Input/Keyboard/KeyE.png
 level_1.tscn::PackedScene::7513268896018301633::1760867073::0::1::::<><><>0<>0<><>::uid://dlg1bunlq0ne2::::res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetElement.png<>uid://dhfn30u448up0::::res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetField.png<>uid://fggjwu4ovhy::::res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetHouse.png<>uid://f8sge3swu4g6::::res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetHole.png<>uid://by5d33rff4525::::res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetFloorDetail.png<>uid://du55d3asoftok::::res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetVillageAbandoned.png<>uid://4s0a3jmk2hvc::::res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetFloor.png<>uid://6vyrl04say7m::::res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetFloorB.png<>uid://u1g86737741d::::res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetDesert.png<>uid://b08fdxck10mko::::res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/Pipes.png<>uid://dn4areogtmeav::::res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetWater.png<>uid://dmxututu1gu3o::::res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetTowers.png<>uid://ca66ln1dlam0c::::res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetReliefDetail.png<>uid://bljmfugifavy0::::res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetNature.png<>uid://btov7ehlygdat::::res://scenes/characters/player.tscn<>uid://fbirv431ctp6::::res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetDungeon.png<>uid://cetramvpwofvp::::res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetRelief.png<>uid://dcxs2xdt8iyja::::res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/Interior/TilesetInterior.png<>uid://codk0h6arph37::::res://assets/Ninja Adventure - Asset Pack/Backgrounds/Animated/MillPropeller/MillPropeller_B_64x64.png<>uid://byxnn6ncwcyy5::::res://scenes/characters/old_man.tscn<>uid://onigrg5enq16::::res://scenes/main_level/door.tscn<>uid://dlbfs61rs8cyu::::res://scenes/characters/hunter.tscn
-::res://scenes/main_menu_scenes/::1760872195
-loading.gd::GDScript::7523964708174352424::1760872160::0::1::::<>Control<><>0<>0<><>::
+::res://scenes/main_menu_scenes/::1760896800
+loading.gd::GDScript::7523964708174352424::1760874545::0::1::::<>Control<><>0<>0<><>::
 loading.tscn::PackedScene::9138474441253851810::1760872195::0::1::::<><><>0<>0<><>::uid://dfgwum8540tca::::res://scenes/main_menu_scenes/loading.gd<>uid://b1mqbc53or6qf::::res://assets/Ninja Adventure - Asset Pack/Ui/Theme/Wip/ThemeBamboo/nine_path_panel.png<>uid://d072fa2v1v6ep::::res://fonts/KodeMono-SemiBold.ttf<>uid://co6ysfhwlj837::::res://fonts/KodeMono-Bold.ttf
+personality_screen.gd::GDScript::8364898253597168348::1760874036::0::1::::<>Control<><>0<>0<><>::
+personality_screen.tscn::PackedScene::6002465331973759359::1760896800::0::1::::<><><>0<>0<><>::uid://df01q02tg7e3b::::res://assets/extra/personality_bg.jpg<>uid://drgawf3r273p5::::res://scenes/main_menu_scenes/personality_screen.gd<>uid://di76k0r34bfu5::::res://assets/fonts/m23.TTF
 start_screen.tscn::PackedScene::984471232620299426::1760868636::0::1::::<><><>0<>0<><>::uid://b5rd1vwvocjws::::res://scripts/main_menu/start_screen.gd<>uid://dwpem723d1uw::::res://assets/extra/start_bg.jpg<>uid://di76k0r34bfu5::::res://assets/fonts/m23.TTF
 ::res://scripts/::1760872449
 chat_window.gd::GDScript::4976177909782613010::1760867073::0::1::::<>CanvasLayer<><>0<>0<><>::
@@ -2445,4 +2448,5 @@ old_man.gd::GDScript::8395899871000272086::1760867073::0::1::::<>StaticBody2D<><
 villager1.gd::GDScript::2362831743247580518::1760867073::0::1::::<>StaticBody2D<><>0<>0<><>::
 villager2.gd::GDScript::3815124832016122344::1760867073::0::1::::<>StaticBody2D<><>0<>0<><>::
 woman-npc.gd::GDScript::3547168921635412869::1760867073::0::1::::<>StaticBody2D<><>0<>0<><>::
-::res://scripts/player_global/::1760872449
+::res://scripts/player_global/::1760873334
+globaltraits.gd::GDScript::5159160450420531342::1760873334::0::1::::<>Node<><>0<>0<><>::
