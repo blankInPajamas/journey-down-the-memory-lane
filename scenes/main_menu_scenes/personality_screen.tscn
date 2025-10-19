@@ -1,0 +1,88 @@
+[gd_scene load_steps=6 format=3 uid="uid://crrvyyp3lu05p"]
+
+[ext_resource type="Texture2D" uid="uid://df01q02tg7e3b" path="res://assets/extra/personality_bg.jpg" id="1_47b3m"]
+[ext_resource type="Script" uid="uid://drgawf3r273p5" path="res://scenes/main_menu_scenes/personality_screen.gd" id="1_fs7sh"]
+[ext_resource type="FontFile" uid="uid://co6ysfhwlj837" path="res://fonts/KodeMono-Bold.ttf" id="3_u2jj3"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_pky6u"]
+line_spacing = 5.0
+font = ExtResource("3_u2jj3")
+font_size = 50
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gtw7i"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+
+[node name="Personality_screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fs7sh")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1283.6796
+offset_bottom = 721.0
+texture = ExtResource("1_47b3m")
+
+[node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(1100, 0)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -550.0
+offset_top = 83.0
+offset_right = 550.0
+offset_bottom = 147.0
+grow_horizontal = 2
+text = "Dummy text"
+label_settings = SubResource("LabelSettings_pky6u")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -350.0
+offset_top = -43.0
+offset_right = 350.0
+offset_bottom = 257.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 100
+alignment = 1
+
+[node name="Option 1" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(450, 300)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_u2jj3")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_gtw7i")
+text = "Option 1"
+
+[node name="Option 2" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(450, 300)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_u2jj3")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_gtw7i")
+text = "Option 2"
+
+[connection signal="pressed" from="HBoxContainer/Option 1" to="." method="_on_option_1_pressed"]
+[connection signal="pressed" from="HBoxContainer/Option 2" to="." method="_on_option_2_pressed"]
