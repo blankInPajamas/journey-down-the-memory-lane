@@ -34,7 +34,7 @@ Here are the nine villagers the player will interact with.
 
     Core Personality Archetype: The Pragmatist
 
-    Relationship to Player's Past: The Opportunist. He saw the shipwreck and salvaged some of the wreckage, finding a signet ring that suggests the player is a person of high status. He is trying to figure out how to profit from the situation.
+    Relationship to Player's Past: The Opportunist. He saw the shipwreck and salvaged some of the wreckage, finding a signet ring that suggests the player is a person of high status. in the process he also rescued the player, and his house is where the player wakes up. He is trying to figure out how to profit from the situation.
 
     Patience Level: 2/10
 

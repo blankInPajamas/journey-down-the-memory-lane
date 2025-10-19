@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=4 uid="uid://cky8nsble7220"]
+[gd_scene load_steps=37 format=4 uid="uid://cky8nsble7220"]
 
 [ext_resource type="Script" uid="uid://crgggfqhapnek" path="res://scripts/interior/house_1.gd" id="1_kbegk"]
 [ext_resource type="Texture2D" uid="uid://by5d33rff4525" path="res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetFloorDetail.png" id="1_ki3t3"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://bkpjphx2fb62n" path="res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/Interior/Elements.png" id="10_uhueh"]
 [ext_resource type="PackedScene" uid="uid://btov7ehlygdat" path="res://scenes/characters/player.tscn" id="12_3l87p"]
 [ext_resource type="PackedScene" uid="uid://wqi5pc8j78b2" path="res://scenes/characters/master.tscn" id="13_3l87p"]
+[ext_resource type="PackedScene" uid="uid://onigrg5enq16" path="res://scenes/main_level/door.tscn" id="13_kbegk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o7ioy"]
 texture = ExtResource("1_ki3t3")
@@ -4676,3 +4677,7 @@ offset_bottom = -16.0
 grow_horizontal = 0
 grow_vertical = 0
 text = "Press F to proceed...."
+
+[node name="Door" parent="." instance=ExtResource("13_kbegk")]
+position = Vector2(168, 269)
+destination_level_tag = "level1"
