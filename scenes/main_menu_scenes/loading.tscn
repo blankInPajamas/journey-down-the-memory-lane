@@ -1,0 +1,72 @@
+[gd_scene load_steps=7 format=3 uid="uid://d3g0lr1d1gl3o"]
+
+[ext_resource type="Script" uid="uid://dfgwum8540tca" path="res://scenes/main_menu_scenes/loading.gd" id="1_dv3yt"]
+[ext_resource type="Texture2D" uid="uid://b1mqbc53or6qf" path="res://assets/Ninja Adventure - Asset Pack/Ui/Theme/Wip/ThemeBamboo/nine_path_panel.png" id="2_kebp6"]
+[ext_resource type="FontFile" uid="uid://d072fa2v1v6ep" path="res://fonts/KodeMono-SemiBold.ttf" id="3_3u7pb"]
+[ext_resource type="FontFile" uid="uid://co6ysfhwlj837" path="res://fonts/KodeMono-Bold.ttf" id="4_i2ga8"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3u7pb"]
+line_spacing = 8.0
+font = ExtResource("3_3u7pb")
+font_size = 20
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_s483b"]
+font = ExtResource("4_i2ga8")
+font_color = Color(0, 0, 0, 1)
+
+[node name="Loading" type="Control"]
+custom_minimum_size = Vector2(900, 80)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dv3yt")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_top = -1.0
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+custom_minimum_size = Vector2(1000, 320)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -450.0
+offset_top = -121.5
+offset_right = 450.0
+offset_bottom = 121.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_kebp6")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="Label" type="Label" parent="NinePatchRect"]
+custom_minimum_size = Vector2(930, 0)
+layout_mode = 0
+offset_left = 31.0
+offset_top = 29.0
+offset_right = 961.0
+offset_bottom = 55.0
+label_settings = SubResource("LabelSettings_3u7pb")
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Next_step" type="Label" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 783.0
+offset_top = 280.0
+offset_right = 985.0
+offset_bottom = 303.0
+text = "Press F to proceed..."
+label_settings = SubResource("LabelSettings_s483b")

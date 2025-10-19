@@ -15,3 +15,18 @@
 4. Working on windmill:
     a. Added the assets
     b. Collision (to be done)
+
+-----------------
+
+Ishmam:
+- [x] Starting screen
+- [x] Loading screen
+- [] Personality questions
+    - [x] Global personality metric
+        - empathy, risk, outlook, social, temper
+
+- [] Inventory
+- [] Pickup items
+    - [] When items are picked up, text box show
+    - [] ESC to remove the text box
+- [] Introductory text box for each interior
