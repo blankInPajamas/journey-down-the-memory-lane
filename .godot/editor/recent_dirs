@@ -1,5 +1,6 @@
-res://scripts/interior
+res://scripts
 res://scenes/main_menu_scenes
+res://scripts/interior
 res://scripts/player_global
 res://assets/Ninja Adventure - Asset Pack/Ui/Theme/Wip/ThemeBamboo
 res://assets/Ninja Adventure - Asset Pack/Ui/Theme/Wip/ThemeRed
@@ -19,4 +20,3 @@ res://assets/Ninja Adventure - Asset Pack/Actor/Characters/Woman/SeparateAnim
 res://assets/Ninja Adventure - Asset Pack/Ui
 res://scenes
 res://assets/Ninja Adventure - Asset Pack/Actor/Characters/OldWoman
-res://assets/Ninja Adventure - Asset Pack/Ui/Dialog

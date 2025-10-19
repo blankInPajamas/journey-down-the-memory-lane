@@ -4606,6 +4606,7 @@ sources/7 = SubResource("TileSetAtlasSource_dchdp")
 paragraph_spacing = -10.0
 
 [node name="House1" type="Node2D"]
+process_mode = 3
 script = ExtResource("1_kbegk")
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -4634,6 +4635,7 @@ position = Vector2(170, 47)
 position = Vector2(118, 37)
 
 [node name="UI_Layer" type="CanvasLayer" parent="."]
+process_mode = 3
 
 [node name="Panel" type="Panel" parent="UI_Layer"]
 custom_minimum_size = Vector2(200, 50)

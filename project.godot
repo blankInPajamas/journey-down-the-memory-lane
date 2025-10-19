@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 ChatWindow="*res://scenes/chat_window.tscn"
 Globaltraits="*res://scripts/player_global/globaltraits.gd"
+Global="*res://scripts/global.gd"
 
 [display]
 

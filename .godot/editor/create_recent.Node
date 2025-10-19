@@ -1,11 +1,11 @@
-Label
-Panel
 CanvasLayer
+Label
+ColorRect
+TextureRect
+Panel
 Button
 HBoxContainer
-TextureRect
 NinePatchRect
-ColorRect
 VBoxContainer
 Sprite2D
 StaticBody2D
