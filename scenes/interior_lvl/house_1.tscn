@@ -1,5 +1,6 @@
-[gd_scene load_steps=34 format=4 uid="uid://cky8nsble7220"]
+[gd_scene load_steps=36 format=4 uid="uid://cky8nsble7220"]
 
+[ext_resource type="Script" uid="uid://crgggfqhapnek" path="res://scripts/interior/house_1.gd" id="1_kbegk"]
 [ext_resource type="Texture2D" uid="uid://by5d33rff4525" path="res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetFloorDetail.png" id="1_ki3t3"]
 [ext_resource type="Texture2D" uid="uid://4s0a3jmk2hvc" path="res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetFloor.png" id="2_w2xca"]
 [ext_resource type="Texture2D" uid="uid://6vyrl04say7m" path="res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetFloorB.png" id="3_v2t40"]
@@ -11,8 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://bljmfugifavy0" path="res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetNature.png" id="9_1rw8q"]
 [ext_resource type="Texture2D" uid="uid://dcxs2xdt8iyja" path="res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/Interior/TilesetInterior.png" id="9_84lmt"]
 [ext_resource type="Texture2D" uid="uid://bkpjphx2fb62n" path="res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/Interior/Elements.png" id="10_uhueh"]
+[ext_resource type="PackedScene" uid="uid://btov7ehlygdat" path="res://scenes/characters/player.tscn" id="12_3l87p"]
 [ext_resource type="PackedScene" uid="uid://wqi5pc8j78b2" path="res://scenes/characters/master.tscn" id="13_3l87p"]
-[ext_resource type="PackedScene" uid="uid://onigrg5enq16" path="res://scenes/main_level/door.tscn" id="13_kbegk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o7ioy"]
 texture = ExtResource("1_ki3t3")
@@ -4601,7 +4602,12 @@ sources/4 = SubResource("TileSetAtlasSource_3417i")
 sources/6 = SubResource("TileSetAtlasSource_8s02b")
 sources/7 = SubResource("TileSetAtlasSource_dchdp")
 
+[sub_resource type="LabelSettings" id="LabelSettings_3w6u5"]
+paragraph_spacing = -10.0
+
 [node name="House1" type="Node2D"]
+process_mode = 3
+script = ExtResource("1_kbegk")
 
 [node name="TileMap" type="TileMap" parent="."]
 format = 2
@@ -4622,13 +4628,51 @@ tile_set = SubResource("TileSet_2i72f")
 tile_map_data = PackedByteArray("AAACAAgAAAAdAAoAAAADAAgAAAAeAAoAAAAEAAgAAAAfAAoAAAATAAMAAAAdABEAAAASAAgAAAAGAAQAAAATAAgAAAAHAAQAAAAJAP7/BgAGAAgAAAAKAP7/BgAHAAgAAAAHAP3/BgACAAcAAAAJAP3/BgAGAAcAAAAKAP3/BgAHAAcAAAAMAP3/AAAWABQAAAAMAP7/AAAWABUAAAAHAP7/BgACAAgAAAAHAA0ABgAAAAcAAAAHAA4ABgAAAAgAAAANAA0ABgAAAAcAAAANAA4ABgAAAAgAAAAKAAwABgAMAAQAADAKAAsABgAMAAQAAAALAAsABgAMAAQAABALAAwABgAMAAQAADAHAAgAAAAdAAkAAAAHAAcAAAAdAAgAAAAIAAcAAAAeAAgAAAAIAAgAAAAeAAkAAAAJAAgABgAOAAAAAAABAAEABgAMAAQAAGABAAIABgAMAAQAAGABAAMABgAMAAQAAGACAAAABgANAAQAAAACAAEABgANAAUAAAACAAIABgANAAUAAAACAAMABgANAAYAAAACAAQABgALAAMAAAADAAAABgANAAQAAAADAAEABgANAAUAAAADAAIABgANAAUAAAADAAMABgANAAYAAAADAAQABgAMAAMAAAAEAAAABgANAAQAAAAEAAEABgANAAUAAAAEAAIABgANAAUAAAAEAAMABgANAAYAAAAEAAQABgANAAMAAAAFAAEABgAMAAQAAFAFAAIABgAMAAQAAHAFAAMABgAMAAQAAFAFAAQABgACAAkAAAABAAAABgAMAAQAAGACAP//BgALAAIAAAADAP//BgAMAAIAAAAEAP//BgANAAIAAAAFAAAABgAMAAQAAHD///7/BgAGAAAAABD//wUABgAAAAcAAAD//wYABgAAAAgAAAABAAgAAAAdAA8AAAABAAsAAAAVAA4AAAACAAsAAAAgAA8AABADAAsAAAAgAA8AAAAEAAsAAAARAA0AAAAVAAkAAAAPABAAAAAVAAQABgAAAAcAAAAVAAUABgAAAAgAAAAVAAEAAAAUABIAAAASAAEABgAEAAkAAAAOAAEAAAAVAA4AAAAMAAQABgADAAoAAAANAAQABgAEAAoAAAAOAAQABgAAAAkAABAKAAQABgAAAAkAAAALAAQABgAEAAoAABARAAYAAAAeAAoAAAAQAAYAAAAdAAoAAAASAAwAAAAfAAwAAAASAA0AAAAfAA0AAAASAA4AAAAfAA4AAAATAAwAAAAgAAwAAAATAA0AAAAgAA0AAAATAA4AAAAgAA4AAAAJAAsABgAMAAQAAAAJAAwABgAMAAQAADA=")
 tile_set = SubResource("TileSet_pol71")
 
+[node name="player" parent="." instance=ExtResource("12_3l87p")]
+position = Vector2(170, 47)
+
 [node name="master" parent="." instance=ExtResource("13_3l87p")]
 position = Vector2(118, 37)
 
-[node name="SpawnFromWorld" type="Marker2D" parent="."]
-position = Vector2(168, 253)
+[node name="UI_Layer" type="CanvasLayer" parent="."]
+process_mode = 3
 
-[node name="Door" parent="." instance=ExtResource("13_kbegk")]
-position = Vector2(168, 278)
-target_scene_path = "res://scenes/main_level/level_1.tscn"
-target_spawn_name = "SpawnFromHouse1"
+[node name="Panel" type="Panel" parent="UI_Layer"]
+custom_minimum_size = Vector2(200, 50)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -581.0
+offset_top = -166.0
+offset_right = 582.0
+offset_bottom = -45.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="UI_Layer/Panel"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 11.0
+offset_right = 120.0
+offset_bottom = 34.0
+text = "You woke up just now. Use up, down, left and right arrow keys to move. 
+
+Go to the man towards to the left and talk with him."
+label_settings = SubResource("LabelSettings_3w6u5")
+
+[node name="Label2" type="Label" parent="UI_Layer/Panel"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -181.0
+offset_top = -39.0
+offset_right = -21.0
+offset_bottom = -16.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Press F to proceed...."

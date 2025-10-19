@@ -56,7 +56,7 @@ func show_question() -> void:
 		change_scene = true
 		print("All questions answered. Ready to change scene.")
 		Globaltraits.print_traits()
-		get_tree().change_scene_to_file("res://scenes/main_level/level_1.tscn")
+		get_tree().change_scene_to_file("res://scenes/interior_lvl/house_1.tscn")
 
 
 func _on_Option_1_pressed() -> void:

@@ -1,16 +1,33 @@
-[gd_scene load_steps=6 format=3 uid="uid://crrvyyp3lu05p"]
+[gd_scene load_steps=9 format=3 uid="uid://crrvyyp3lu05p"]
 
 [ext_resource type="Texture2D" uid="uid://df01q02tg7e3b" path="res://assets/extra/personality_bg.jpg" id="1_47b3m"]
 [ext_resource type="Script" uid="uid://drgawf3r273p5" path="res://scenes/main_menu_scenes/personality_screen.gd" id="1_fs7sh"]
-[ext_resource type="FontFile" uid="uid://co6ysfhwlj837" path="res://fonts/KodeMono-Bold.ttf" id="3_u2jj3"]
+[ext_resource type="FontFile" uid="uid://b1i0g1mpjhfh1" path="res://fonts/KodeMono-Medium.ttf" id="3_fs7sh"]
+[ext_resource type="FontFile" uid="uid://bfms1tldxfc6p" path="res://fonts/Pixellari.ttf" id="4_u2jj3"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_pky6u"]
 line_spacing = 5.0
-font = ExtResource("3_u2jj3")
+font = ExtResource("3_fs7sh")
 font_size = 50
 font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gtw7i"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_47b3m"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fs7sh"]
 bg_color = Color(1, 1, 1, 1)
 border_width_left = 5
 border_width_top = 5
@@ -70,18 +87,20 @@ alignment = 1
 custom_minimum_size = Vector2(450, 300)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_u2jj3")
+theme_override_fonts/font = ExtResource("4_u2jj3")
 theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxFlat_gtw7i")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_47b3m")
 text = "Option 1"
 
 [node name="Option 2" type="Button" parent="HBoxContainer"]
 custom_minimum_size = Vector2(450, 300)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_u2jj3")
+theme_override_fonts/font = ExtResource("4_u2jj3")
 theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxFlat_gtw7i")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fs7sh")
 text = "Option 2"
 
 [connection signal="pressed" from="HBoxContainer/Option 1" to="." method="_on_option_1_pressed"]
