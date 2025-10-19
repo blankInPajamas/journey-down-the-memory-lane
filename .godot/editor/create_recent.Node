@@ -1,11 +1,12 @@
-CanvasLayer
+FileDialog
+Button
 Label
+NinePatchRect
 ColorRect
+CanvasLayer
 TextureRect
 Panel
-Button
 HBoxContainer
-NinePatchRect
 VBoxContainer
 Sprite2D
 StaticBody2D

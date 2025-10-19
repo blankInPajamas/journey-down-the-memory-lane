@@ -28,9 +28,22 @@ Ishmam:
 - [ ] Introductory text box for each interior
 	- [x] House 1 completed
 	
-- [ ] Pause screen
+- [x] Pause screen
+	- [x] Works for house_1.tscn
+	- [x] Shifts to objective.tscn
 
 - [ ] Inventory
 - [ ] Pickup items
 	- [ ] When items are picked up, text box show
 	- [ ] ESC to remove the text box
+	
+	
+pickup item, 
+inventory, 
+objective, 
+pause screen (directly goes to objective), [x]
+character, 
+player current metric screen, 
+new game, save game, load game,  
+text box (typewriter effect) for each interior, and upon picking up items. 
+place items (according to the artifact file in the lore folder)

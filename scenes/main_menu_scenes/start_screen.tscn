@@ -93,7 +93,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_dcajn")
 theme_override_styles/focus = SubResource("StyleBoxFlat_5r6cd")
 text = "Start"
 
-[node name="Settings" type="Button" parent="VBoxContainer"]
+[node name="Load" type="Button" parent="VBoxContainer"]
 custom_minimum_size = Vector2(350, 100)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -104,7 +104,7 @@ theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxFlat_k611o")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_dcajn")
 theme_override_styles/focus = SubResource("StyleBoxFlat_5r6cd")
-text = "Setting"
+text = "Load Game"
 
 [node name="Exit" type="Button" parent="VBoxContainer"]
 custom_minimum_size = Vector2(350, 100)
@@ -120,5 +120,11 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_5r6cd")
 text = "Exit
 "
 
+[node name="FileDialog" type="FileDialog" parent="."]
+oversampling_override = 1.0
+position = Vector2i(0, 36)
+root_subfolder = "save_file"
+
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Load" to="." method="_on_load_pressed"]
 [connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]

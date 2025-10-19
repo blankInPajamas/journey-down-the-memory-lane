@@ -22,13 +22,11 @@ func _input(event):
 		ui_layer.visible = false
 	
 	if event.is_action_pressed("ui_cancel"):
-		print("This worked")
-		pause_screen.visible = true
-		get_tree().paused = true
-		is_paused_screen_visible = true
+		Global.previous_scene = get_tree().current_scene.scene_file_path
+		get_tree().change_scene_to_file("res://scenes/main_menu_scenes/objectives.tscn")
 
-	if event.is_action_pressed("ui_accept"):
-		print("Coming here") # SPACE or mapped F
-		pause_screen.visible = false
-		get_tree().paused = false
-		is_paused_screen_visible = false
+	#if event.is_action_pressed("ui_accept"):
+		#print("Coming here") # SPACE or mapped F
+		#pause_screen.visible = false
+		#get_tree().paused = false
+		#is_paused_screen_visible = false
