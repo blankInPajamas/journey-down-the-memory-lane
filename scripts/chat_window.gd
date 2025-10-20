@@ -13,6 +13,8 @@ signal conversation_ended
 
 # NOTE: The "OllamaRequest" HTTPRequest node must exist in your scene.
 
+@onready var relationship_feedback_label = $RelationshipFeedbackLabel
+
 # State variables to manage the flow
 var is_typing = false
 var is_waiting_for_player_input = false
@@ -21,15 +23,29 @@ func _ready():
 	hide()
 	player_input.hide()
 	continue_indicator.hide()
+	relationship_feedback_label.hide()
 
 	# This connection is essential for submitting text
 	player_input.text_submitted.connect(_on_player_text_submitted)
 
 # --- PUBLIC FUNCTIONS ---
 
+func display_relationship_change(change: int):
+	if change > 0:
+		relationship_feedback_label.text = "Relationship improved (+" + str(change) + ")"
+		relationship_feedback_label.show()
+	elif change < 0:
+		relationship_feedback_label.text = "Relationship worsened (" + str(change) + ")"
+		relationship_feedback_label.show()
+	else:
+		# If no change, keep it hidden
+		relationship_feedback_label.hide()
+		
+
 func show_thinking_indicator():
 	dialogue_text.text = "..."
 	dialogue_text.visible_characters = 3 
+	relationship_feedback_label.hide()
 	continue_indicator.hide()
 	player_input.hide()
 
@@ -67,6 +83,7 @@ func close_conversation():
 	hide() 
 	is_typing = false
 	is_waiting_for_player_input = false
+	relationship_feedback_label.hide()
 	continue_indicator.stop()
 	emit_signal("conversation_ended")
 	
@@ -100,6 +117,7 @@ func _unhandled_input(event):
 		
 		# This is the block that opens the text box
 		elif not is_waiting_for_player_input:
+			relationship_feedback_label.hide()
 			is_waiting_for_player_input = true
 			continue_indicator.play("point_down")
 			continue_indicator.show() 

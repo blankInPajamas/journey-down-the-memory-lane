@@ -31,10 +31,10 @@ transform = Transform2D(1.5, 0, 0, 1.5, 0, 0)
 script = ExtResource("1_nwrjk")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
-offset_left = 416.00006
-offset_top = 224.33342
-offset_right = 928.0
-offset_bottom = 335.33337
+offset_left = 437.3334
+offset_top = 229.66678
+offset_right = 949.3334
+offset_bottom = 340.6667
 scale = Vector2(0.5, 0.494)
 texture = ExtResource("2_a1bs7")
 region_rect = Rect2(0, 0, 300, 58)
@@ -44,49 +44,66 @@ wait_time = 0.05
 one_shot = true
 
 [node name="NinePatchRect2" type="NinePatchRect" parent="."]
-offset_left = 418.00006
-offset_top = 280.33344
-offset_right = 926.0001
-offset_bottom = 354.33344
+offset_left = 439.3334
+offset_top = 285.66678
+offset_right = 947.3335
+offset_bottom = 359.66678
+scale = Vector2(0.5, 0.494)
+texture = ExtResource("3_pkcf1")
+
+[node name="NinePatchRect3" type="NinePatchRect" parent="."]
+offset_left = 439.3333
+offset_top = 323.99997
+offset_right = 947.3334
+offset_bottom = 352.34018
 scale = Vector2(0.5, 0.494)
 texture = ExtResource("3_pkcf1")
 
 [node name="NameLabel" type="RichTextLabel" parent="."]
-offset_left = 422.00006
-offset_top = 222.33339
-offset_right = 528.0
-offset_bottom = 245.33339
+offset_left = 443.3334
+offset_top = 227.66675
+offset_right = 549.3334
+offset_bottom = 250.66675
 scale = Vector2(0.5, 0.494)
 text = "Name"
 
 [node name="DialogueText" type="RichTextLabel" parent="."]
-offset_left = 462.00006
-offset_top = 239.33342
-offset_right = 854.0001
-offset_bottom = 295.33337
+offset_left = 481.33334
+offset_top = 244.66669
+offset_right = 889.3334
+offset_bottom = 312.143
+scale = Vector2(0.5, 0.494)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "SPEECH"
+
+[node name="RelationshipFeedbackLabel" type="RichTextLabel" parent="."]
+offset_left = 446.66666
+offset_top = 326.0
+offset_right = 924.0
+offset_bottom = 351.641
 scale = Vector2(0.5, 0.494)
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 text = "SPEECH"
 
 [node name="Portrait" type="TextureRect" parent="."]
-offset_left = 424.00006
-offset_top = 241.33336
-offset_right = 477.00006
-offset_bottom = 302.33325
+offset_left = 445.3334
+offset_top = 246.66672
+offset_right = 498.3334
+offset_bottom = 307.66663
 scale = Vector2(0.5, 0.494)
 texture = ExtResource("4_dh2cy")
 
 [node name="PlayerInput" type="LineEdit" parent="."]
-offset_left = 425.00006
-offset_top = 285.33337
-offset_right = 901.0001
-offset_bottom = 335.33337
+offset_left = 446.3334
+offset_top = 290.66672
+offset_right = 922.3335
+offset_bottom = 340.66672
 scale = Vector2(0.5, 0.494)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 placeholder_text = "Input text"
 
 [node name="ContinueIndicator" type="AnimatedSprite2D" parent="."]
-position = Vector2(466.3749, 277.43887)
+position = Vector2(487.7082, 282.77222)
 scale = Vector2(0.71153843, 0.63161546)
 sprite_frames = SubResource("SpriteFrames_ee5nq")
 animation = &"point_down"

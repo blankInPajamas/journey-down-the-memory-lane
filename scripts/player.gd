@@ -120,6 +120,8 @@ func _on_chat_response_received(result, response_code, headers, body):
 	var rel_change = json.get("relationship_change", 0)
 	PlayerMetrics.update_relationship(npc_in_range.npc_name, rel_change)
 	
+	ChatWindow.display_relationship_change(rel_change)
+	
 	# 3. Update Player Trait Metric
 	var trait_shift = json.get("player_trait_shift", {})
 	if not trait_shift.is_empty():
