@@ -26,13 +26,15 @@ animations = [{
 }]
 
 [node name="ChatWindow" type="CanvasLayer"]
+scale = Vector2(1.5, 1.5)
+transform = Transform2D(1.5, 0, 0, 1.5, 0, 0)
 script = ExtResource("1_nwrjk")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
-offset_left = 752.0
-offset_top = 155.0
-offset_right = 1264.0
-offset_bottom = 266.0
+offset_left = 416.00006
+offset_top = 224.33342
+offset_right = 928.0
+offset_bottom = 335.33337
 scale = Vector2(0.5, 0.494)
 texture = ExtResource("2_a1bs7")
 region_rect = Rect2(0, 0, 300, 58)
@@ -42,49 +44,49 @@ wait_time = 0.05
 one_shot = true
 
 [node name="NinePatchRect2" type="NinePatchRect" parent="."]
-offset_left = 754.0
-offset_top = 211.0
-offset_right = 1262.0
-offset_bottom = 285.0
+offset_left = 418.00006
+offset_top = 280.33344
+offset_right = 926.0001
+offset_bottom = 354.33344
 scale = Vector2(0.5, 0.494)
 texture = ExtResource("3_pkcf1")
 
 [node name="NameLabel" type="RichTextLabel" parent="."]
-offset_left = 758.0
-offset_top = 153.0
-offset_right = 864.0
-offset_bottom = 176.0
+offset_left = 422.00006
+offset_top = 222.33339
+offset_right = 528.0
+offset_bottom = 245.33339
 scale = Vector2(0.5, 0.494)
 text = "Name"
 
 [node name="DialogueText" type="RichTextLabel" parent="."]
-offset_left = 798.0
-offset_top = 170.0
-offset_right = 1190.0
-offset_bottom = 226.0
+offset_left = 462.00006
+offset_top = 239.33342
+offset_right = 854.0001
+offset_bottom = 295.33337
 scale = Vector2(0.5, 0.494)
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 text = "SPEECH"
 
 [node name="Portrait" type="TextureRect" parent="."]
-offset_left = 760.0
-offset_top = 172.0
-offset_right = 813.0
-offset_bottom = 233.0
+offset_left = 424.00006
+offset_top = 241.33336
+offset_right = 477.00006
+offset_bottom = 302.33325
 scale = Vector2(0.5, 0.494)
 texture = ExtResource("4_dh2cy")
 
 [node name="PlayerInput" type="LineEdit" parent="."]
-offset_left = 761.0
-offset_top = 216.0
-offset_right = 1237.0
-offset_bottom = 266.0
+offset_left = 425.00006
+offset_top = 285.33337
+offset_right = 901.0001
+offset_bottom = 335.33337
 scale = Vector2(0.5, 0.494)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 placeholder_text = "Input text"
 
 [node name="ContinueIndicator" type="AnimatedSprite2D" parent="."]
-position = Vector2(802.375, 208.10547)
+position = Vector2(466.3749, 277.43887)
 scale = Vector2(0.71153843, 0.63161546)
 sprite_frames = SubResource("SpriteFrames_ee5nq")
 animation = &"point_down"

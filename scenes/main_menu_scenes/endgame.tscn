@@ -1,0 +1,85 @@
+[gd_scene load_steps=8 format=3 uid="uid://cto311wext52m"]
+
+[ext_resource type="Script" uid="uid://hlce2o68u2kn" path="res://endgame.gd" id="1_dboyo"]
+[ext_resource type="Texture2D" uid="uid://b1mqbc53or6qf" path="res://assets/Ninja Adventure - Asset Pack/Ui/Theme/Wip/ThemeBamboo/nine_path_panel.png" id="2_t4p2o"]
+[ext_resource type="FontFile" uid="uid://di76k0r34bfu5" path="res://assets/fonts/m23.TTF" id="3_qtcoi"]
+[ext_resource type="FontFile" uid="uid://bfms1tldxfc6p" path="res://fonts/Pixellari.ttf" id="4_jhe5g"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ouwe6"]
+font = ExtResource("3_qtcoi")
+font_size = 80
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_b0vfo"]
+paragraph_spacing = 15.0
+font = ExtResource("4_jhe5g")
+font_size = 40
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qfdhm"]
+bg_color = Color(0.123473026, 0.12347307, 0.123472966, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+
+[node name="endgame" type="Node2D"]
+script = ExtResource("1_dboyo")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1281.0
+offset_bottom = 717.0
+color = Color(3.760215e-09, 6.7683867e-09, 0.05187151, 1)
+
+[node name="NinePatchRect" type="NinePatchRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 60.0
+offset_right = 1220.0
+offset_bottom = 651.0
+texture = ExtResource("2_t4p2o")
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+
+[node name="Title" type="Label" parent="ColorRect/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -202.5
+offset_top = 37.0
+offset_right = 257.5
+offset_bottom = 117.0
+grow_horizontal = 2
+text = "end game"
+label_settings = SubResource("LabelSettings_ouwe6")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="ColorRect/NinePatchRect"]
+layout_mode = 0
+offset_left = 250.0
+offset_top = 194.0
+offset_right = 896.0
+offset_bottom = 466.0
+text = ">Talk to the NPC
+"
+label_settings = SubResource("LabelSettings_b0vfo")
+
+[node name="New Game" type="Button" parent="ColorRect"]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 0
+offset_left = 89.0
+offset_top = 619.0
+offset_right = 239.0
+offset_bottom = 669.0
+theme_override_fonts/font = ExtResource("4_jhe5g")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_qfdhm")
+text = "New game"
+
+[node name="ApiRequest" type="HTTPRequest" parent="."]
+
+[connection signal="pressed" from="ColorRect/New Game" to="." method="_on_start_pressed"]

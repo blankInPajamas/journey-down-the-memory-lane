@@ -4679,5 +4679,6 @@ grow_vertical = 0
 text = "Press F to proceed...."
 
 [node name="Door" parent="." instance=ExtResource("13_kbegk")]
+visible = false
 position = Vector2(168, 269)
 destination_level_tag = "level1"

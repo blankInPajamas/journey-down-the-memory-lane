@@ -1,0 +1,59 @@
+[gd_scene load_steps=3 format=3 uid="uid://8wqp6pfrb5ii"]
+
+[ext_resource type="Script" uid="uid://bwrky78vc6ig1" path="res://scenes/main_menu_scenes/stats.gd" id="1_6o5ep"]
+[ext_resource type="FontFile" uid="uid://d072fa2v1v6ep" path="res://fonts/KodeMono-SemiBold.ttf" id="3_v7a8s"]
+
+[node name="Stats" type="MarginContainer"]
+offset_right = 127.0
+offset_bottom = 261.0
+scale = Vector2(0.25, 0.25)
+script = ExtResource("1_6o5ep")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="EmpathyLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_v7a8s")
+theme_override_font_sizes/font_size = 17
+text = "Honesty
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="RiskLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.92675185, 0.9570338, 0.225261, 1)
+theme_override_fonts/font = ExtResource("3_v7a8s")
+theme_override_font_sizes/font_size = 17
+text = "Honesty
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="OutlookLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.5680662, 0.21998546, 1)
+theme_override_fonts/font = ExtResource("3_v7a8s")
+theme_override_font_sizes/font_size = 17
+text = "Honesty
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="SocialLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8296326, 0.03573227, 0.841615, 1)
+theme_override_fonts/font = ExtResource("3_v7a8s")
+theme_override_font_sizes/font_size = 17
+text = "Honesty
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="TemperLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.41032714, 1.02277845e-07, 2.1658838e-07, 1)
+theme_override_fonts/font = ExtResource("3_v7a8s")
+theme_override_font_sizes/font_size = 17
+text = "Honesty
+"
+metadata/_edit_use_anchors_ = true
