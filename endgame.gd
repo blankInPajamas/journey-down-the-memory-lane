@@ -1,5 +1,5 @@
 # end_screen.gd
-extends Control
+extends Node2D
 
 @onready var summary_label = $SummaryLabel
 @onready var api_request = $ApiRequest

@@ -19,7 +19,7 @@ var conversation_history := []
 
 # <--- NEW: List of NPCs required to trigger the end screen
 # !!! EDIT THIS LIST with the exact 'npc_name' string from your NPC scenes
-var required_npcs_to_meet := ["Kael, Alistair, Brenna, Maeve, Seraphina, Brother Theron, Silas, Finn"] # e.g., ["Ruksana", "Farhan", "Villager Boy"]
+var required_npcs_to_meet := ["Kael", "Alistair", "Brenna", "Elara", "Seraphina", "Brother Theron", "Silas", "Finn"] # e.g., ["Ruksana", "Farhan", "Villager Boy"]
 
 # --- Trait Management ---
 func initialize_traits(initial_stats: Dictionary) -> void:

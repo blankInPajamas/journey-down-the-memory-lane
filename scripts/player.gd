@@ -152,6 +152,11 @@ func _on_chat_response_received(result, response_code, headers, body):
 func _on_conversation_ended():
 	is_chatting = false
 	print("Conversation ended.")
+	
+	if PlayerMetrics.are_all_npcs_met():
+		print("All NPCs met! Triggering end screen.")
+		# Make sure this path is correct for your end screen
+		get_tree().change_scene_to_file("res://scenes/main_menu_scenes/endgame.tscn")
 
 # --- Spawning and Interaction ---
 
